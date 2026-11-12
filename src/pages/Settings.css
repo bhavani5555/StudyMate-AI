@@ -1,0 +1,840 @@
+
+/* =========================================
+   SETTINGS PAGE
+========================================= */
+
+.settings-page,
+.settings-page * {
+  box-sizing: border-box;
+}
+
+.settings-page {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  min-height: calc(100vh - 110px);
+  margin: 0 auto;
+  padding: 28px;
+  overflow-x: clip;
+  background: #f7f8fc;
+  color: #1e293b;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.settings-header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.settings-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #ede9fe;
+  color: #6d5dfc;
+}
+
+.settings-header h1 {
+  margin: 0 0 6px;
+  color: #1e293b;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.settings-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.settings-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.settings-loading-spinner {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border: 2px solid #ddd6fe;
+  border-top-color: #6d5dfc;
+  border-radius: 50%;
+  animation: settings-spin 0.7s linear infinite;
+}
+
+@keyframes settings-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.settings-card {
+  min-width: 0;
+  margin-bottom: 22px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.025);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-card:hover {
+  border-color: #d7d3f8;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================
+   CARD HEADING
+========================================= */
+
+.settings-card-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  margin-bottom: 25px;
+}
+
+.settings-card-title > div:last-child {
+  min-width: 0;
+}
+
+.settings-card-title h2 {
+  margin: 0 0 5px;
+  color: #1e293b;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.settings-card-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.profile-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.ai-icon {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.study-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.help-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.about-icon {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 20px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.settings-field label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.settings-field input,
+.settings-field select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #334155;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-field input::placeholder {
+  color: #94a3b8;
+}
+
+.settings-field input:hover:not(:disabled):not([readonly]),
+.settings-field select:hover:not(:disabled) {
+  border-color: #a99df5;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+  border-color: #7c6cf2;
+  box-shadow: 0 0 0 3px rgba(109, 93, 252, 0.12);
+}
+
+.settings-field input[readonly] {
+  background: #f8fafc;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.settings-field input:disabled,
+.settings-field select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.settings-field select option {
+  background: #ffffff;
+  color: #334155;
+}
+
+.settings-field-help {
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   EMAIL INPUT ICON
+========================================= */
+
+.settings-input-with-icon {
+  position: relative;
+  min-width: 0;
+}
+
+.settings-input-with-icon > svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.settings-input-with-icon input {
+  padding-left: 40px;
+}
+
+/* =========================================
+   ACCOUNT NOTE
+========================================= */
+
+.settings-account-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 22px;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.settings-account-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #16a34a;
+}
+
+/* =========================================
+   STUDY PREFERENCE SUMMARY
+========================================= */
+
+.settings-preference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.settings-preference-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.settings-preference-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #ede9fe;
+  color: #6d5dfc;
+}
+
+.settings-preference-item div:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 5px;
+}
+
+.settings-preference-item span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.settings-preference-item strong {
+  color: #1e293b;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   HELP AND SUPPORT
+========================================= */
+
+.settings-help-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.settings-help-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.settings-help-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #16a34a;
+}
+
+.settings-help-item p {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.settings-description {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.settings-version-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.settings-version-row span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.settings-version-row strong {
+  color: #6d5dfc;
+  font-size: 13px;
+}
+
+/* =========================================
+   SAVE FEEDBACK
+========================================= */
+
+.settings-save-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 5px 0 17px;
+  padding: 13px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.settings-save-message.success {
+  border: 1px solid #bbf7d0;
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.settings-save-message.error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.settings-save-message svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 25px;
+}
+
+.settings-save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 23px;
+  border: none;
+  border-radius: 9px;
+  background: #6d5dfc;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-save-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #5846e8;
+  box-shadow: 0 5px 13px rgba(109, 93, 252, 0.2);
+}
+
+.settings-save-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.settings-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+html[data-theme="dark"] .settings-page {
+  background: #0b1120;
+  color: #cbd5e1;
+}
+
+/* Header */
+
+html[data-theme="dark"] .settings-header h1,
+html[data-theme="dark"] .settings-card-title h2 {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .settings-header p,
+html[data-theme="dark"] .settings-card-title p,
+html[data-theme="dark"] .settings-description {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .settings-header-icon {
+  background: rgba(129, 140, 248, 0.15);
+  color: #a5b4fc;
+}
+
+/* Loading */
+
+html[data-theme="dark"] .settings-loading {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .settings-loading-spinner {
+  border-color: #37315f;
+  border-top-color: #a5b4fc;
+}
+
+/* Cards */
+
+html[data-theme="dark"] .settings-card {
+  border-color: #27354b;
+  background: #151f32;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .settings-card:hover {
+  border-color: #3b4b68;
+}
+
+/* Section icons */
+
+html[data-theme="dark"] .profile-icon {
+  background: rgba(139, 92, 246, 0.16);
+  color: #c4b5fd;
+}
+
+html[data-theme="dark"] .ai-icon {
+  background: rgba(14, 165, 233, 0.14);
+  color: #7dd3fc;
+}
+
+html[data-theme="dark"] .study-icon {
+  background: rgba(34, 197, 94, 0.13);
+  color: #86efac;
+}
+
+html[data-theme="dark"] .help-icon {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fcd34d;
+}
+
+html[data-theme="dark"] .about-icon {
+  background: rgba(236, 72, 153, 0.14);
+  color: #f9a8d4;
+}
+
+/* Form */
+
+html[data-theme="dark"] .settings-field label {
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .settings-field input,
+html[data-theme="dark"] .settings-field select {
+  border-color: #334155;
+  background: #111c30;
+  color: #f1f5f9;
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] .settings-field input::placeholder {
+  color: #64748b;
+}
+
+html[data-theme="dark"] .settings-field input:focus,
+html[data-theme="dark"] .settings-field select:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.12);
+}
+
+html[data-theme="dark"] .settings-field input[readonly] {
+  background: #0f192b;
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .settings-field select option {
+  background: #151f32;
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .settings-field-help {
+  color: #8493a8;
+}
+
+/* Account note */
+
+html[data-theme="dark"] .settings-account-note {
+  border-color: #334155;
+  background: #111c30;
+  color: #94a3b8;
+}
+
+/* Preference summary */
+
+html[data-theme="dark"] .settings-preference-item {
+  border-color: #334155;
+  background: #111c30;
+}
+
+html[data-theme="dark"] .settings-preference-icon {
+  background: rgba(129, 140, 248, 0.14);
+  color: #a5b4fc;
+}
+
+html[data-theme="dark"] .settings-preference-item span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .settings-preference-item strong {
+  color: #f1f5f9;
+}
+
+/* Help */
+
+html[data-theme="dark"] .settings-help-item p {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .settings-help-item svg {
+  color: #4ade80;
+}
+
+/* About */
+
+html[data-theme="dark"] .settings-version-row {
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .settings-version-row span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .settings-version-row strong {
+  color: #a5b4fc;
+}
+
+/* Save feedback */
+
+html[data-theme="dark"] .settings-save-message.success {
+  border-color: #166534;
+  background: rgba(22, 163, 74, 0.12);
+  color: #86efac;
+}
+
+html[data-theme="dark"] .settings-save-message.error {
+  border-color: #991b1b;
+  background: rgba(220, 38, 38, 0.12);
+  color: #fca5a5;
+}
+
+/* Save button */
+
+html[data-theme="dark"] .settings-save-btn {
+  background: #7565f5;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .settings-save-btn:hover:not(:disabled) {
+  background: #8b7cf8;
+  box-shadow: 0 5px 15px rgba(109, 93, 252, 0.24);
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.settings-page button:focus-visible,
+.settings-page input:focus-visible,
+.settings-page select:focus-visible {
+  outline: 2px solid #8b7cf8;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+  .settings-page {
+    padding: 22px;
+  }
+
+  .settings-card {
+    padding: 22px;
+  }
+
+  .settings-form-grid {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 17px;
+  }
+
+  .settings-header {
+    margin-bottom: 22px;
+  }
+
+  .settings-header-content {
+    gap: 12px;
+  }
+
+  .settings-header-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+  }
+
+  .settings-header h1 {
+    font-size: 23px;
+  }
+
+  .settings-header p {
+    font-size: 12px;
+  }
+
+  .settings-card {
+    margin-bottom: 17px;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .settings-card-title {
+    gap: 11px;
+    margin-bottom: 20px;
+  }
+
+  .settings-card-title h2 {
+    font-size: 15px;
+  }
+
+  .settings-card-title p {
+    font-size: 12px;
+  }
+
+  .settings-section-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .settings-form-grid,
+  .settings-preference-grid {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .settings-field input,
+  .settings-field select {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .settings-preference-item {
+    padding: 14px;
+  }
+
+  .settings-actions {
+    justify-content: stretch;
+  }
+
+  .settings-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .settings-page {
+    padding: 13px;
+  }
+
+  .settings-card {
+    padding: 15px;
+  }
+
+  .settings-header h1 {
+    font-size: 21px;
+  }
+
+  .settings-header p {
+    max-width: 230px;
+  }
+
+  .settings-card-title {
+    align-items: flex-start;
+  }
+
+  .settings-save-message {
+    padding: 11px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-page *,
+  .settings-page *::before,
+  .settings-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

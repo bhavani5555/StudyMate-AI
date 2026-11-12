@@ -1,0 +1,685 @@
+
+/* =========================================
+   DASHBOARD - BASE LAYOUT
+========================================= */
+
+.dashboard .welcome-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(250px, 300px);
+  align-items: center;
+  min-height: 250px;
+  padding: 24px 30px;
+  gap: 18px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard .welcome-content h1 {
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.dashboard .welcome-label {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.dashboard .welcome-content > p:last-child {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.dashboard .welcome-icon {
+  font-size: 42px;
+}
+
+/* =========================================
+   ABOUT STUDYMATE - BASE STYLES
+========================================= */
+
+.dashboard-about-card {
+  height: auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e8eaf2;
+  box-shadow: 0 4px 16px rgba(30, 41, 59, 0.05);
+}
+
+.dashboard .dashboard-about-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.dashboard .dashboard-about-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  color: #7047eb;
+  background: #f0ebff;
+}
+
+.dashboard .dashboard-about-heading h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #20243a;
+}
+
+.dashboard .dashboard-about-heading span:not(.dashboard-about-icon) {
+  font-size: 10px;
+  color: #777b90;
+}
+
+.dashboard .dashboard-about-card > p {
+  margin: 0 0 11px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: #62677d;
+}
+
+.dashboard .dashboard-about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dashboard .dashboard-about-features span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #535970;
+}
+
+.dashboard .dashboard-about-features svg {
+  color: #7653e8;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   PREMIUM DASHBOARD DARK MODE
+========================================= */
+
+html[data-theme="dark"] .dashboard {
+  color: #eef2ff;
+}
+
+/* =========================================
+   WELCOME BANNER
+========================================= */
+
+html[data-theme="dark"] .dashboard .welcome-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  padding: 24px 30px;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(124, 92, 255, 0.24),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 10% 100%,
+      rgba(37, 99, 235, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(
+      125deg,
+      #111a32 0%,
+      #1c2142 55%,
+      #29204b 100%
+    ) !important;
+  border: 1px solid rgba(153, 133, 255, 0.28) !important;
+  border-radius: 22px;
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .dashboard .welcome-content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .dashboard .welcome-label {
+  color: #c4b5fd !important;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+html[data-theme="dark"] .dashboard .welcome-content h1 {
+  color: #ffffff !important;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.8px;
+  text-shadow: 0 3px 18px rgba(139, 92, 246, 0.2);
+}
+
+html[data-theme="dark"] .dashboard .welcome-content > p:last-child {
+  color: #cbd5e1 !important;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+html[data-theme="dark"] .dashboard .welcome-icon {
+  position: relative;
+  z-index: 1;
+  color: #c4b5fd;
+  filter: drop-shadow(0 0 15px rgba(167, 139, 250, 0.55));
+}
+
+/* =========================================
+   GENERAL DASHBOARD PANELS
+========================================= */
+
+html[data-theme="dark"] .dashboard .dashboard-panel,
+html[data-theme="dark"] .dashboard .stat-card {
+  background: #1d2538 !important;
+  border: 1px solid #35415e !important;
+  color: #eef2ff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+}
+
+html[data-theme="dark"] .dashboard .dashboard-panel-heading h2 {
+  color: #f8fafc !important;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-panel-heading p {
+  color: #b8c2d8 !important;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-panel-heading > svg {
+  color: #b9a5ff;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+html[data-theme="dark"] .dashboard .stat-card p {
+  color: #cbd5e1 !important;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .dashboard .stat-card h2 {
+  color: #ffffff !important;
+  font-size: 27px;
+  font-weight: 750;
+}
+
+html[data-theme="dark"] .dashboard .stat-card > span {
+  color: #aebbd1 !important;
+  font-size: 13px;
+}
+
+/* =========================================
+   CONTINUE LEARNING
+========================================= */
+
+html[data-theme="dark"] .dashboard .continue-item {
+  background: #252f47 !important;
+  border: 1px solid #3a4765 !important;
+  border-radius: 13px;
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .dashboard .continue-item:hover {
+  background: #303c59 !important;
+  border-color: #9278f5 !important;
+}
+
+html[data-theme="dark"] .dashboard .continue-text strong {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .dashboard .continue-text small {
+  color: #bdc7dc !important;
+  font-size: 12px;
+}
+
+html[data-theme="dark"] .dashboard .continue-item > svg {
+  color: #b9a5ff;
+}
+
+/* =========================================
+   WEEKLY STUDY ANALYTICS
+========================================= */
+
+html[data-theme="dark"] .dashboard .weekly-total h2 {
+  color: #ffffff !important;
+  font-size: 29px;
+  font-weight: 750;
+}
+
+html[data-theme="dark"] .dashboard .weekly-total span {
+  color: #b8c2d8 !important;
+  font-size: 13px;
+}
+
+html[data-theme="dark"] .dashboard .weekly-chart {
+  background: #222b40;
+  border: 1px solid #35415e;
+  border-radius: 14px;
+  padding: 15px 12px 10px;
+}
+
+html[data-theme="dark"] .dashboard .weekly-bar-area {
+  background: #303a52 !important;
+  border-radius: 9px 9px 4px 4px;
+  min-height: 115px;
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .dashboard .weekly-bar {
+  background: linear-gradient(
+    180deg,
+    #a78bfa 0%,
+    #7656e8 100%
+  ) !important;
+  border-radius: 9px 9px 3px 3px;
+  min-height: 0;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.25);
+  transition: height 0.4s ease;
+}
+
+html[data-theme="dark"] .dashboard .weekly-chart-column > span {
+  color: #d0d8e9 !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   TODAY'S ACTIVITY
+========================================= */
+
+html[data-theme="dark"] .dashboard .activity-summary > div {
+  background: #252f47;
+  border: 1px solid #3a4765;
+  border-radius: 12px;
+}
+
+html[data-theme="dark"] .dashboard .activity-summary strong {
+  color: #ffffff !important;
+  font-size: 21px;
+}
+
+html[data-theme="dark"] .dashboard .activity-summary span {
+  color: #c0cadd !important;
+  font-size: 12px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-activity-list button,
+html[data-theme="dark"] .dashboard .recent-activity-list button {
+  background: transparent;
+  border-bottom: 1px solid #35415e;
+  color: #eef2ff !important;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-activity-list button:hover,
+html[data-theme="dark"] .dashboard .recent-activity-list button:hover {
+  background: #28334c;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-activity-list strong,
+html[data-theme="dark"] .dashboard .recent-activity-text strong {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-activity-list small,
+html[data-theme="dark"] .dashboard .recent-activity-text small {
+  color: #b8c2d8 !important;
+  font-size: 12px;
+}
+
+/* =========================================
+   EMPTY STATES
+========================================= */
+
+html[data-theme="dark"] .dashboard .dashboard-empty {
+  color: #e2e8f0 !important;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-empty p {
+  color: #e2e8f0 !important;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-empty span {
+  color: #aebbd1 !important;
+  font-size: 13px;
+}
+
+/* =========================================
+   LEARNING GOALS
+========================================= */
+
+html[data-theme="dark"] .dashboard .goal-progress strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dashboard .goal-progress span {
+  color: #bdc7dc !important;
+}
+
+html[data-theme="dark"] .dashboard .goal-progress-track,
+html[data-theme="dark"] .dashboard .achievements-preview-track,
+html[data-theme="dark"] .dashboard .achievements-preview-mini-track {
+  background: #39445e !important;
+}
+
+html[data-theme="dark"] .dashboard .goal-list button {
+  color: #e2e8f0 !important;
+  border-bottom: 1px solid #35415e;
+}
+
+html[data-theme="dark"] .dashboard .goal-list button:hover {
+  background: #28334c;
+}
+
+html[data-theme="dark"] .dashboard .goal-list button span {
+  color: #e2e8f0 !important;
+}
+
+html[data-theme="dark"] .dashboard .goal-list button > svg:last-child {
+  color: #aebbd1;
+}
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+html[data-theme="dark"] .dashboard .achievements-preview-info strong {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+html[data-theme="dark"] .dashboard .achievements-preview-info small,
+html[data-theme="dark"] .dashboard .achievements-preview-summary span {
+  color: #bdc7dc !important;
+}
+
+html[data-theme="dark"] .dashboard .achievements-preview-summary strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-text-link {
+  color: #c4b5fd !important;
+}
+
+/* =========================================
+   ABOUT STUDYMATE - DARK MODE
+========================================= */
+
+html[data-theme="dark"] .dashboard .dashboard-about-card {
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(139, 92, 246, 0.20),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #202944 0%,
+      #272344 55%,
+      #25203d 100%
+    ) !important;
+  border: 1px solid rgba(167, 139, 250, 0.32) !important;
+  border-radius: 18px;
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(167, 139, 250, 0.65) !important;
+  box-shadow: 0 14px 32px rgba(93, 63, 190, 0.20);
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-heading h3 {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-heading span:not(.dashboard-about-icon) {
+  color: #b9b9d4 !important;
+  font-size: 10px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-card > p {
+  color: #d4d9eb !important;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-features {
+  gap: 7px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-features span {
+  color: #e0e5f5 !important;
+  font-size: 11px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-features svg {
+  color: #a78bfa !important;
+  filter: drop-shadow(0 0 5px rgba(167, 139, 250, 0.35));
+}
+
+html[data-theme="dark"] .dashboard .dashboard-about-icon {
+  background: linear-gradient(
+    135deg,
+    #6344bd,
+    #3d5cb8
+  ) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(196, 181, 253, 0.3);
+  box-shadow: 0 5px 16px rgba(124, 92, 255, 0.3);
+}
+
+/* =========================================
+   EXPLORE STUDYMATE
+========================================= */
+
+html[data-theme="dark"] .dashboard .tools-panel {
+  background: #1d2538 !important;
+  border-color: #35415e !important;
+}
+
+html[data-theme="dark"] .dashboard .tools-panel .dashboard-panel-heading h2 {
+  color: #f1f3fb !important;
+}
+
+html[data-theme="dark"] .dashboard .tools-panel .dashboard-panel-heading p {
+  color: #a5abc0 !important;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-tool-card {
+  background: #252f47 !important;
+  border: 1px solid #3a4765 !important;
+  color: #f8fafc !important;
+  box-shadow: none;
+  transition: all 0.25s ease;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-tool-card:hover {
+  background: #303c59 !important;
+  border-color: #9278f5 !important;
+  transform: translateY(-3px);
+}
+
+html[data-theme="dark"] .dashboard .dashboard-tool-card strong {
+  color: #ffffff !important;
+  font-size: 15px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-tool-card small {
+  color: #c0cadd !important;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-tool-link {
+  color: #c4b5fd !important;
+  font-size: 13px;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-tool-card .tool-icon {
+  border-color: transparent;
+}
+
+/* =========================================
+   DASHBOARD SEARCH
+========================================= */
+
+html[data-theme="dark"] .dashboard input[type="text"] {
+  background: #20263a;
+  color: #f1f5f9;
+  border: 1px solid #39425c;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+html[data-theme="dark"] .dashboard input[type="text"]::placeholder {
+  color: #9ba6bd;
+  opacity: 1;
+}
+
+html[data-theme="dark"] .dashboard input[type="text"]:hover {
+  background: #252d43;
+  border-color: #6554c0;
+}
+
+html[data-theme="dark"] .dashboard input[type="text"]:focus {
+  outline: none;
+  background: #222940;
+  border-color: #8b75f5;
+  box-shadow: 0 0 0 3px rgba(139, 117, 245, 0.18);
+}
+
+html[data-theme="dark"] .dashboard .search-icon {
+  color: #b6a5ff;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+html[data-theme="dark"] .dashboard .dashboard-modal {
+  background: #202940 !important;
+  border: 1px solid #3c4968;
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-modal h2,
+html[data-theme="dark"] .dashboard .dashboard-modal-value {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-modal p,
+html[data-theme="dark"] .dashboard .dashboard-modal li {
+  color: #d0d8e9 !important;
+}
+
+html[data-theme="dark"] .dashboard .dashboard-modal-heading button {
+  color: #e2e8f0;
+  background: #303a52;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+html[data-theme="dark"] .dashboard .dashboard-error-message {
+  background: #482a35;
+  border: 1px solid #87485a;
+  color: #ffd8e0;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .dashboard .welcome-section {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .dashboard-about-card {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  html[data-theme="dark"] .dashboard .welcome-content h1 {
+    font-size: 25px;
+  }
+
+  html[data-theme="dark"] .dashboard .dashboard-panel-heading h2 {
+    font-size: 17px;
+  }
+
+  html[data-theme="dark"] .dashboard .stat-card h2 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard .welcome-section {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .dashboard .welcome-content h1,
+  html[data-theme="dark"] .dashboard .welcome-content h1 {
+    font-size: 23px;
+  }
+
+  .dashboard .welcome-icon {
+    display: none;
+  }
+
+  .dashboard-about-card {
+    grid-column: auto;
+    padding: 13px;
+  }
+
+  .dashboard .dashboard-about-heading h3 {
+    font-size: 14px;
+  }
+
+  html[data-theme="dark"] .dashboard .welcome-section {
+    padding: 18px;
+  }
+}
