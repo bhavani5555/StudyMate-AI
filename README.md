@@ -1,83 +1,113 @@
 # StudyMate AI – AI-Powered Learning Platform
 
-StudyMate AI is an AI-powered learning platform designed for aspiring software developers. It provides intelligent learning tools, technical interview preparation, and personalized study features to support continuous learning and skill development.
+StudyMate AI is an AI-powered learning platform built to help students and aspiring software developers improve their technical skills, prepare for interviews, and manage their daily learning activities.
 
-##  Key Features
+It brings AI-based learning tools, interview preparation, and study management features together in one application.
+
+## Project Objectives
+
+- Build a platform that makes technical learning easier.
+- Help users understand programming concepts using AI.
+- Generate study notes from topics and PDF documents.
+- Create quizzes to test technical knowledge.
+- Provide flashcards for quick revision.
+- Help users prepare for technical interviews.
+- Track learning progress and daily study time.
+- Keep all learning tools in one place.
+
+## Key Features
 
 ### 1. Dashboard
 - View an overview of learning activities.
-- Track study progress and learning performance.
-- Access important learning tools from one place.
+- Track study progress.
+- Access all important features from one place.
 
 ### 2. AI Tutor
-- Interact with an AI-powered tutor.
-- Ask technical questions and receive intelligent explanations.
-- Get assistance with programming and learning concepts.
+- Ask technical questions and get AI-generated answers.
+- Understand programming concepts easily.
+- Get help with different technical topics.
 
 ### 3. AI Notes Generator
-- Generate structured study notes using AI.
-- Upload PDF documents for learning assistance.
+- Generate study notes using AI.
+- Upload PDF documents.
 - View and download generated notes.
 
 ### 4. Quiz Generator
 - Generate quizzes using AI.
-- Practice technical concepts through questions.
-- Evaluate knowledge and improve understanding.
+- Practice technical questions.
+- Check knowledge through quiz results.
 
 ### 5. Flashcards
 - Create and manage flashcards.
-- Revise important concepts efficiently.
-- Improve knowledge retention through active recall.
+- Revise important concepts.
+- Improve memory through regular practice.
 
 ### 6. Interview Preparation
 - Practice technical interview questions.
-- Prepare for software development interviews.
-- Improve technical knowledge and interview readiness.
+- Prepare for software developer interviews.
+- Improve technical knowledge.
 
 ### 7. My Learning
 - Manage learning activities.
-- Organize study resources.
+- Organize study materials.
 - Track learning progress.
 
 ### 8. Achievements
-- View learning achievements.
-- Monitor learning milestones.
-- Stay motivated throughout the learning journey.
+- View completed learning milestones.
+- Track achievements.
+- Stay motivated to continue learning.
 
 ### 9. Study Time Tracker
 - Track daily study time.
-- Monitor time spent on learning activities.
-- Maintain consistent study habits.
+- View time spent on learning.
+- Maintain regular study habits.
 
 ### 10. Settings
 - Manage application preferences.
 - Customize available settings.
-- Access account-related options.
+- Access account options.
 
-##  Technologies Used
+## Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | HTML5 | Web page structure |
-| CSS3 | Styling and responsive layouts |
-| JavaScript (ES6+) | Application logic |
+| CSS3 | Styling and responsive design |
+| JavaScript (ES6+) | Application functionality |
 | React.js | Frontend development |
 | Vite | Development server and build tool |
 | Firebase Authentication | User authentication |
 | Firebase Hosting | Application deployment |
-| Google Gemini API | Generative AI integration |
+| Google Gemini API | AI integration |
 | Git | Version control |
 | GitHub | Source code management |
 
-##  Project Screenshots
+## Repository Structure
 
-Screenshots of the application are available in the `Images` folder.
+The project contains the following main folders and files.
 
-##  Installation and Setup
+```text
+StudyMate-AI/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── Images/
+├── .env
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-Follow these steps to run the project locally.
+*Note: Update this structure based on the actual files and folders in your project.*
 
-### Prerequisites
+## Requirements
 
 - Node.js
 - npm
@@ -85,57 +115,87 @@ Follow these steps to run the project locally.
 - Firebase project configuration
 - Google Gemini API key
 
-### Step 1: Clone the Repository
+## Installation and Setup
+
+Follow these steps to run the project on your computer.
+
+### Step 1 — Clone the Repository
 
 ```bash
 git clone https://github.com/bhavani5555/StudyMate-AI.git
 ```
 
-### Step 2: Navigate to the Project Directory
+### Step 2 — Open the Project Folder
 
 ```bash
 cd StudyMate-AI
 ```
 
-### Step 3: Install Dependencies
+### Step 3 — Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Step 4: Configure Environment Variables
+### Step 4 — Configure Environment Variables
 
-Create a `.env` file in the project root directory.
+Create a `.env` file in the main project folder.
 
-Add the required environment variable:
+Add your Gemini API key:
 
 ```env
 VITE_GEMINI_API_KEY=your_gemini_api_key
 ```
 
-Configure your Firebase project settings according to the application configuration.
+Configure Firebase settings according to your Firebase project.
 
-**Note:** Never commit actual API keys, passwords, or private credentials to GitHub. Vite environment variables prefixed with `VITE_` are exposed to browser code, so production AI requests should use a secure backend or equivalent protected service.
+**Security Note:** Do not upload API keys or passwords to GitHub. Variables starting with `VITE_` are visible in browser code. For production, use a secure backend to handle Gemini API requests.
 
-### Step 5: Start the Development Server
+### Step 5 — Start the Application
 
 ```bash
 npm run dev
 ```
 
-Open the local development URL displayed in your terminal.
+Open the local URL displayed in the terminal to access the application.
 
-##  Live Demo
+### Step 6 — Build the Application
 
-[Visit StudyMate AI](https://studymate-ai-32855.web.app)
+```bash
+npm run build
+```
 
-##  Project Objective
+This creates the production build inside the `dist/` folder.
 
-The objective of StudyMate AI is to simplify the learning process by bringing AI-powered tutoring, study material generation, knowledge assessment, and interview preparation together in one platform.
+## Project Screenshots
 
-##  Developer
+Screenshots of the application are available in the `Images` folder.
 
-Developed as a personal portfolio project to explore modern frontend development, Firebase integration, and Generative AI capabilities.
+They show the main pages and features of StudyMate AI.
 
+## Live Demo
+
+[Visit StudyMate AI](https://studymate-ai-32855.web.app/)
+
+## Project Highlights
+
+- Developed an AI-powered learning platform using React.js.
+- Integrated Google Gemini API for AI-based learning features.
+- Used Firebase Authentication for user authentication.
+- Deployed the application using Firebase Hosting.
+- Built different tools for technical learning and interview preparation.
+- Used Git and GitHub to manage project source code.
+
+## Future Enhancements
+
+- Add more AI-powered learning features.
+- Improve learning progress tracking.
+- Add personalized study recommendations.
+- Improve interview preparation features.
+- Add more options for revision and practice.
+
+## Developer
+
+Developed as a personal portfolio project to improve frontend development skills and gain practical experience with React.js, Firebase, and Generative AI.
 
 **StudyMate AI – Learn Smarter. Prepare Better. Grow Faster.**

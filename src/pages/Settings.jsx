@@ -28,7 +28,7 @@ import "./Settings.css";
 
 /*  LOCAL SETTINGS */
 
-const getSavedSettings = (uid) => {
+function getSavedSettings(uid) {
   try {
     const rawSettings = localStorage.getItem("studymate-settings");
 
@@ -50,7 +50,7 @@ const getSavedSettings = (uid) => {
     console.error("Local settings loading failed:", error);
     return {};
   }
-};
+}
 
 /* DOMAIN OPTIONS */
 
