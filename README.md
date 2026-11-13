@@ -2,7 +2,7 @@
 
 StudyMate AI is an AI-powered learning platform designed for aspiring software developers. It provides intelligent learning tools, technical interview preparation, and personalized study features to support continuous learning and skill development.
 
-## 🚀 Key Features
+##  Key Features
 
 ### 1. Dashboard
 - View an overview of learning activities.
@@ -54,7 +54,7 @@ StudyMate AI is an AI-powered learning platform designed for aspiring software d
 - Customize available settings.
 - Access account-related options.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 | Technology | Purpose |
 |---|---|
@@ -69,11 +69,11 @@ StudyMate AI is an AI-powered learning platform designed for aspiring software d
 | Git | Version control |
 | GitHub | Source code management |
 
-## 📸 Project Screenshots
+##  Project Screenshots
 
 Screenshots of the application are available in the `Images` folder.
 
-## ⚙️ Installation and Setup
+##  Installation and Setup
 
 Follow these steps to run the project locally.
 
@@ -125,18 +125,17 @@ npm run dev
 
 Open the local development URL displayed in your terminal.
 
-## 🌐 Live Demo
+##  Live Demo
 
 [Visit StudyMate AI](https://studymate-ai-32855.web.app)
 
-## 🎯 Project Objective
+##  Project Objective
 
 The objective of StudyMate AI is to simplify the learning process by bringing AI-powered tutoring, study material generation, knowledge assessment, and interview preparation together in one platform.
 
-## 👨‍💻 Developer
+##  Developer
 
 Developed as a personal portfolio project to explore modern frontend development, Firebase integration, and Generative AI capabilities.
 
----
 
 **StudyMate AI – Learn Smarter. Prepare Better. Grow Faster.**
