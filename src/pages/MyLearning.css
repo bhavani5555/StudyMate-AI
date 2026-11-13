@@ -1,6 +1,4 @@
-/* =========================================
-   MY LEARNING - MAIN PAGE
-========================================= */
+/* MY LEARNING  */
 
 .my-learning-page {
   --learning-bg: #f7f8fc;
@@ -46,9 +44,7 @@
   outline-offset: 3px;
 }
 
-/* =========================================
-   PAGE HERO
-========================================= */
+/*  PAGE HERO */
 
 .my-learning-hero {
   position: relative;
@@ -179,9 +175,7 @@
   background: rgba(255, 255, 255, 0.17);
 }
 
-/* =========================================
-   STATISTICS
-========================================= */
+/*  STATISTICS */
 
 .learning-stats {
   display: grid;
@@ -274,9 +268,7 @@
   background: #fce7f3;
 }
 
-/* =========================================
-   LEARNING LIBRARY
-========================================= */
+/* LEARNING LIBRARY  */
 
 .learning-library {
   padding: 25px;
@@ -332,9 +324,7 @@
   font-weight: 700;
 }
 
-/* =========================================
-   CATEGORY FILTERS
-========================================= */
+/* CATEGORY FILTERS  */
 
 .learning-filter-bar {
   display: flex;
@@ -408,9 +398,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* =========================================
-   SECTION HEADINGS
-========================================= */
+/*  SECTION HEADINGS  */
 
 .my-learning-section {
   margin-bottom: 30px;
@@ -488,9 +476,7 @@
   background: #fce7f3;
 }
 
-/* =========================================
-   SAVED ITEMS LIST
-========================================= */
+/*  SAVED ITEMS LIST */
 
 .saved-notes-list {
   display: flex;
@@ -593,9 +579,7 @@
   font-weight: 700;
 }
 
-/* =========================================
-   CARD ACTION BUTTONS
-========================================= */
+/* CARD ACTION BUTTONS */
 
 .saved-note-actions {
   display: flex;
@@ -647,9 +631,7 @@
   background: #dc2626;
 }
 
-/* =========================================
-   EXPANDED CONTENT
-========================================= */
+/*  EXPANDED CONTENT  */
 
 .saved-note-content {
   min-width: 0;
@@ -702,9 +684,7 @@
   background: var(--learning-border);
 }
 
-/* =========================================
-   NOTES MARKDOWN
-========================================= */
+/*   NOTES MARKDOWN  */
 
 .markdown-content {
   color: var(--learning-text);
@@ -850,9 +830,7 @@
   background: var(--learning-border);
 }
 
-/* =========================================
-   QUIZ RESULT SUMMARY
-========================================= */
+/*   QUIZ RESULT SUMMARY */
 
 .quiz-detail-summary {
   display: grid;
@@ -889,9 +867,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   QUIZ QUESTION DETAILS
-========================================= */
+/*  QUIZ QUESTION DETAILS */
 
 .quiz-question-detail {
   padding: 18px 0;
@@ -1033,9 +1009,7 @@
   line-height: 1.7;
 }
 
-/* =========================================
-   DETAIL INFORMATION GRID
-========================================= */
+/*  DETAIL INFORMATION GRID  */
 
 .detail-info-grid {
   display: grid;
@@ -1043,9 +1017,7 @@
   gap: 12px;
 }
 
-/* =========================================
-   FLASHCARD DETAILS
-========================================= */
+/*  FLASHCARD DETAILS */
 
 .flashcard-detail-grid {
   display: grid;
@@ -1106,9 +1078,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   INTERVIEW DETAILS
-========================================= */
+/* INTERVIEW DETAILS */
 
 .interview-question-list {
   display: flex;
@@ -1152,9 +1122,6 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   EMPTY / LOADING STATES
-========================================= */
 
 .learning-empty-state {
   display: flex;
@@ -1238,10 +1205,6 @@
   background: #7c3aed;
 }
 
-/* =========================================
-   FIRST-TIME EMPTY STATE
-========================================= */
-
 .learning-first-use {
   display: flex;
   flex-direction: column;
@@ -1282,9 +1245,7 @@
   line-height: 1.8;
 }
 
-/* =========================================
-   FOOTER NOTE
-========================================= */
+/*  FOOTER NOTE */
 
 .learning-footer-note {
   display: flex;
@@ -1302,9 +1263,7 @@
   color: #8b5cf6;
 }
 
-/* =========================================
-   DELETE MODAL OVERLAY
-========================================= */
+/*   DELETE MODAL OVERLAY */
 
 .delete-modal-overlay {
   position: fixed;
@@ -1329,9 +1288,7 @@
   }
 }
 
-/* =========================================
-   DELETE MODAL
-========================================= */
+/* DELETE MODAL */
 
 .delete-modal {
   position: relative;
@@ -1478,9 +1435,7 @@
   text-align: left;
 }
 
-/* =========================================
-   DARK MODE
-========================================= */
+/*  DARK MODE  */
 
 html[data-theme="dark"] .my-learning-page {
   --learning-bg: #111827;
@@ -1704,9 +1659,7 @@ html[data-theme="dark"] .delete-modal-error {
   background: #3b252d;
 }
 
-/* =========================================
-   RESPONSIVE - 1150px
-========================================= */
+/*  RESPONSIVE - 1150px */
 
 @media (max-width: 1150px) {
   .learning-stats {
@@ -1719,9 +1672,7 @@ html[data-theme="dark"] .delete-modal-error {
   }
 }
 
-/* =========================================
-   RESPONSIVE - 850px
-========================================= */
+/* RESPONSIVE - 850px */
 
 @media (max-width: 850px) {
   .my-learning-page {
@@ -1751,9 +1702,7 @@ html[data-theme="dark"] .delete-modal-error {
   }
 }
 
-/* =========================================
-   RESPONSIVE - 600px
-========================================= */
+/*  RESPONSIVE - 600px  */
 
 @media (max-width: 600px) {
   .my-learning-page {
@@ -1920,9 +1869,7 @@ html[data-theme="dark"] .delete-modal-error {
   }
 }
 
-/* =========================================
-   RESPONSIVE - 420px
-========================================= */
+/*  RESPONSIVE - 420px */
 
 @media (max-width: 420px) {
   .my-learning-page {
@@ -2019,9 +1966,7 @@ html[data-theme="dark"] .delete-modal-error {
   }
 }
 
-/* =========================================
-   ACCESSIBILITY - REDUCED MOTION
-========================================= */
+/* ACCESSIBILITY - REDUCED MOTION  */
 
 @media (prefers-reduced-motion: reduce) {
   .my-learning-page *,

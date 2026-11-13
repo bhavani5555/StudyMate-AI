@@ -18,9 +18,7 @@ import { saveQuizToCloud } from "../services/quizService";
 
 import "./QuizGenerator.css";
 
-/* =========================================
-   JSON EXTRACTION
-========================================= */
+/*  JSON EXTRACTION */
 
 const extractJSON = (response) => {
   if (typeof response !== "string" || !response.trim()) {
@@ -46,9 +44,7 @@ const extractJSON = (response) => {
   }
 };
 
-/* =========================================
-   ANSWER NORMALIZATION
-========================================= */
+/*  ANSWER NORMALIZATION  */
 
 const getAnswerIndex = (answer, options) => {
   if (Number.isInteger(answer)) {
@@ -74,9 +70,7 @@ const getAnswerIndex = (answer, options) => {
   return -1;
 };
 
-/* =========================================
-   QUESTION VALIDATION
-========================================= */
+/*  QUESTION VALIDATION */
 
 const prepareQuestions = (response, questionCount, questionType) => {
   const parsed = extractJSON(response);
@@ -210,9 +204,7 @@ const prepareQuestions = (response, questionCount, questionType) => {
   });
 };
 
-/* =========================================
-   QUIZ GENERATOR COMPONENT
-========================================= */
+/* QUIZ GENERATOR COMPONENT */
 
 function QuizGenerator() {
   const [topic, setTopic] = useState("");
@@ -239,9 +231,7 @@ function QuizGenerator() {
   // Preserve the exact completed quiz payload when saving fails.
   const completedQuizRef = useRef(null);
 
-  /* =========================================
-     GENERATE QUIZ
-  ========================================= */
+  /*  GENERATE QUIZ  */
 
   const handleStartQuiz = async (e) => {
     e.preventDefault();
@@ -374,9 +364,7 @@ Return only valid JSON.`;
     }
   };
 
-  /* =========================================
-     SELECT ANSWER
-  ========================================= */
+  /* SELECT ANSWER  */
 
   const handleAnswer = (optionIndex) => {
     if (saving) return;
@@ -387,9 +375,7 @@ Return only valid JSON.`;
     }));
   };
 
-  /* =========================================
-     QUIZ SCORE
-  ========================================= */
+  /*  QUIZ SCORE */
 
   const correctAnswers = questions.filter(
     (question, index) =>
@@ -404,9 +390,7 @@ Return only valid JSON.`;
 
   const answeredCount = Object.keys(answers).length;
 
-  /* =========================================
-     SAVE COMPLETED QUIZ
-  ========================================= */
+  /* SAVE COMPLETED QUIZ  */
 
   const handleSubmitQuiz = async () => {
     if (
@@ -463,9 +447,7 @@ Return only valid JSON.`;
     }
   };
 
-  /* =========================================
-     RESTART QUIZ
-  ========================================= */
+  /*  RESTART QUIZ */
 
   const handleRetake = () => {
     if (saving || submissionLockRef.current) return;
@@ -480,9 +462,7 @@ Return only valid JSON.`;
     setPage("config");
   };
 
-  /* =========================================
-     NAVIGATION
-  ========================================= */
+  /* NAVIGATION */
 
   const goToPreviousQuestion = () => {
     if (currentQuestion > 0 && !saving) {
@@ -501,9 +481,7 @@ Return only valid JSON.`;
     }
   };
 
-  /* =========================================
-     RENDER
-  ========================================= */
+  /* RENDER */
 
   return (
     <div className="quiz-page">

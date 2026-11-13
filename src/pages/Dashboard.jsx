@@ -34,9 +34,7 @@ import { getCloudStudyTime } from "../services/studyTimeService";
 
 import "./Dashboard.css";
 
-/* =====================================
-   DATE UTILITIES
-===================================== */
+/*  DATE UTILITIES  */
 
 function getTodayKey() {
   return getDateKey(new Date());
@@ -119,9 +117,7 @@ function formatDuration(seconds = 0) {
   return `${minutes}m`;
 }
 
-/* =====================================
-   LEARNING STREAK
-===================================== */
+/*  LEARNING STREAK  */
 
 function getLearningStreak(daily = {}) {
   let streak = 0;
@@ -145,9 +141,7 @@ function getLearningStreak(daily = {}) {
   return streak;
 }
 
-/* =====================================
-   DASHBOARD COMPONENT
-===================================== */
+/* DASHBOARD COMPONENT */
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -173,9 +167,7 @@ function Dashboard() {
   const [cloudLoading, setCloudLoading] = useState(true);
   const [cloudError, setCloudError] = useState("");
 
-  /* =====================================
-     LOAD LEARNING DATA
-  ===================================== */
+  /*  LOAD LEARNING DATA */
 
   useEffect(() => {
     let isMounted = true;
@@ -278,9 +270,7 @@ function Dashboard() {
     };
   }, [cloudRefresh]);
 
-  /* =====================================
-     LOAD STUDY TIME
-  ===================================== */
+  /*  LOAD STUDY TIME  */
 
   useEffect(() => {
     if (!user?.uid) {
@@ -351,9 +341,7 @@ function Dashboard() {
     };
   }, [user?.uid]);
 
-  /* =====================================
-     LOAD USER SETTINGS
-  ===================================== */
+  /*  LOAD USER SETTINGS  */
 
   useEffect(() => {
     const loadName = () => {
@@ -388,9 +376,7 @@ function Dashboard() {
     };
   }, []);
 
-  /* =====================================
-     STATISTICS MODAL KEYBOARD SUPPORT
-  ===================================== */
+  /*  STATISTICS MODAL KEYBOARD SUPPORT */
 
   useEffect(() => {
     if (!selectedStat) return;
@@ -408,9 +394,7 @@ function Dashboard() {
     };
   }, [selectedStat]);
 
-  /* =====================================
-     TODAY'S DATA
-  ===================================== */
+  /*  TODAY'S DATA */
 
   const today = getTodayKey();
 
@@ -482,9 +466,7 @@ function Dashboard() {
 
   const streak = getLearningStreak(dailyStudy);
 
-  /* =====================================
-     WEEKLY STUDY ANALYTICS
-  ===================================== */
+  /*  WEEKLY STUDY ANALYTICS  */
 
   const weeklyData = Array.from({ length: 7 }, (_, index) => {
     const date = new Date();
@@ -511,9 +493,7 @@ function Dashboard() {
     1
   );
 
-  /* =====================================
-     RECENT ACTIVITY
-  ===================================== */
+  /*  RECENT ACTIVITY */
 
   const recentActivity = [
     ...notes.map((item) => ({
@@ -553,9 +533,7 @@ function Dashboard() {
     )
     .slice(0, 5);
 
-  /* =====================================
-     DASHBOARD STATISTICS
-  ===================================== */
+  /*  DASHBOARD STATISTICS */
 
   const stats = [
     {
@@ -604,9 +582,7 @@ function Dashboard() {
     }
   ];
 
-  /* =====================================
-     LEARNING GOALS
-  ===================================== */
+  /* LEARNING GOALS */
 
   const learningGoals = [
     {
@@ -639,9 +615,7 @@ function Dashboard() {
     (completedGoals / learningGoals.length) * 100
   );
 
-  /* =====================================
-     ACHIEVEMENTS
-  ===================================== */
+  /*  ACHIEVEMENTS  */
 
   const completedInterviewQuestions = interviews.reduce(
     (total, session) =>
@@ -690,9 +664,7 @@ function Dashboard() {
     (unlockedAchievements / dashboardAchievements.length) * 100
   );
 
-  /* =====================================
-     STUDYMATE TOOLS
-  ===================================== */
+  /*  STUDYMATE TOOLS  */
 
   const tools = [
     {
@@ -732,9 +704,7 @@ function Dashboard() {
     }
   ];
 
-  /* =====================================
-     DASHBOARD UI
-  ===================================== */
+  /*  DASHBOARD UI  */
 
   return (
     <main className="dashboard">

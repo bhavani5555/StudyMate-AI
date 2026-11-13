@@ -9,9 +9,7 @@ import {
 
 import { db } from "../firebase";
 
-/* =====================================
-   DATE HELPER
-===================================== */
+/* DATE HELPER */
 
 const getTodayKey = () => {
   const today = new Date();
@@ -23,9 +21,7 @@ const getTodayKey = () => {
   ].join("-");
 };
 
-/* =====================================
-   STUDY TIME DOCUMENT REFERENCE
-===================================== */
+/*  STUDY TIME DOCUMENT REFERENCE */
 
 const getStudyTimeRef = (userId) => {
   if (!userId) {
@@ -41,9 +37,7 @@ const getStudyTimeRef = (userId) => {
   );
 };
 
-/* =====================================
-   SAVE STUDY TIME TO FIRESTORE
-===================================== */
+/* SAVE STUDY TIME TO FIRESTORE */
 
 export const saveStudyTime = async (userId, seconds) => {
   if (
@@ -78,9 +72,7 @@ export const saveStudyTime = async (userId, seconds) => {
   }
 };
 
-/* =====================================
-   GET ALL STUDY TIME RECORDS
-===================================== */
+/*  GET ALL STUDY TIME RECORDS  */
 
 export const getCloudStudyTime = async (userId) => {
   const studyTimeRef = getStudyTimeRef(userId);
@@ -96,9 +88,7 @@ export const getCloudStudyTime = async (userId) => {
   return data.dailySeconds || {};
 };
 
-/* =====================================
-   GET TODAY'S STUDY TIME
-===================================== */
+/*  GET TODAY'S STUDY TIME  */
 
 export const getTodayStudyTime = async (userId) => {
   const dailySeconds = await getCloudStudyTime(userId);
@@ -108,9 +98,7 @@ export const getTodayStudyTime = async (userId) => {
   return Number(dailySeconds[todayKey]) || 0;
 };
 
-/* =====================================
-   FORMAT STUDY TIME
-===================================== */
+/* FORMAT STUDY TIME  */
 
 export const formatStudyTime = (seconds = 0) => {
   const totalSeconds = Math.max(0, Number(seconds) || 0);

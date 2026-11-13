@@ -1,7 +1,5 @@
 
-/* =========================================
-   STUDYMATE AI - NOTES GENERATOR
-   ========================================= */
+/* NOTES GENERATOR*/
 
    .notes-page {
     min-height: calc(100vh - 110px);
@@ -19,9 +17,7 @@
     box-sizing: border-box;
   }
   
-  /* =========================================
-     PAGE HEADER
-     ========================================= */
+  /*  PAGE HEADER */
   
   .notes-header {
     margin-bottom: 28px;
@@ -41,9 +37,7 @@
     line-height: 1.6;
   }
   
-  /* =========================================
-     MAIN LAYOUT
-     ========================================= */
+  /* MAIN LAYOUT */
   
   .notes-layout {
     display: grid;
@@ -54,9 +48,7 @@
     min-width: 0;
   }
   
-  /* =========================================
-     MAIN CARDS
-     ========================================= */
+  /* MAIN CARDS  */
   
   .notes-form-card,
   .notes-preview-card {
@@ -78,9 +70,7 @@
     font-weight: 700;
   }
   
-  /* =========================================
-     FORM GROUPS
-     ========================================= */
+  /*  FORM GROUPS  */
   
   .notes-form-group {
     margin-bottom: 22px;
@@ -154,9 +144,7 @@
     font-weight: 400;
   }
   
-  /* =========================================
-     FILE UPLOAD
-     ========================================= */
+  /*  FILE UPLOAD  */
   
   .notes-upload-area {
     display: flex !important;
@@ -276,9 +264,7 @@
     color: #a66a13;
   }
   
-  /* =========================================
-     GENERATE BUTTON
-     ========================================= */
+  /* GENERATE BUTTON */
   
   .generate-notes-btn {
     display: flex;
@@ -309,9 +295,7 @@
     transform: none;
   }
   
-  /* =========================================
-     NOTES PREVIEW CARD
-     ========================================= */
+  /* NOTES PREVIEW CARD  */
   
   .notes-preview-card {
     display: flex;
@@ -344,9 +328,7 @@
     color: #8055e8;
   }
   
-  /* =========================================
-     EMPTY PREVIEW
-     ========================================= */
+  /* EMPTY PREVIEW  */
   
   .preview-empty {
     display: flex;
@@ -379,9 +361,7 @@
     line-height: 1.6;
   }
   
-  /* =========================================
-     PREVIEW ACTIONS
-     ========================================= */
+  /*  PREVIEW ACTIONS  */
   
   .notes-preview-actions {
     display: flex;
@@ -451,9 +431,7 @@
     line-height: 1.5;
   }
   
-  /* =========================================
-     ERROR MESSAGES
-     ========================================= */
+  /*   ERROR MESSAGES */
   
   .notes-error-message {
     padding: 10px 12px;
@@ -467,9 +445,7 @@
     overflow-wrap: anywhere;
   }
   
-  /* =========================================
-     GENERATED MARKDOWN CONTENT
-     ========================================= */
+  /*   GENERATED MARKDOWN CONTENT */
   
   .generated-notes {
     flex: 1;
@@ -645,9 +621,7 @@
     border-radius: 8px;
   }
   
-  /* =========================================
-     CUSTOM SCROLLBAR
-     ========================================= */
+  /* CUSTOM SCROLLBAR */
   
   .generated-notes::-webkit-scrollbar {
     width: 7px;
@@ -663,9 +637,7 @@
     background: #f5f2fc;
   }
   
-  /* =========================================
-     SAVED NOTES SECTION
-     ========================================= */
+  /*  SAVED NOTES SECTION  */
   
   .saved-notes-section {
     margin-top: 28px;
@@ -727,9 +699,7 @@
     white-space: nowrap;
   }
   
-  /* =========================================
-     SAVED NOTES SEARCH
-     ========================================= */
+  /* SAVED NOTES SEARCH */
   
   .saved-notes-search {
     display: flex;
@@ -793,9 +763,7 @@
     color: #7045d0;
   }
   
-  /* =========================================
-     SAVED NOTES GRID
-     ========================================= */
+  /* SAVED NOTES GRID */
   
   .saved-notes-grid {
     display: grid;
@@ -885,9 +853,7 @@
     margin-top: 1px;
   }
   
-  /* =========================================
-     SAVED NOTE ACTIONS
-     ========================================= */
+  /* SAVED NOTE ACTIONS */
   
   .saved-note-actions {
     display: flex;
@@ -952,9 +918,7 @@
     cursor: not-allowed;
   }
   
-  /* =========================================
-     SAVED NOTES EMPTY / LOADING
-     ========================================= */
+  /*  SAVED NOTES EMPTY / LOADING  */
   
   .saved-notes-empty {
     display: flex;
@@ -1005,9 +969,7 @@
     background: #6e43d5;
   }
   
-  /* =========================================
-     SPINNER
-     ========================================= */
+  /*  SPINNER */
   
   .spin {
     animation: notes-spin 1s linear infinite;
@@ -1019,9 +981,7 @@
     }
   }
   
-  /* =========================================
-     DEMO LABEL
-     ========================================= */
+  /*  DEMO LABEL  */
   
   .demo-label {
     display: inline-block;
@@ -1033,9 +993,7 @@
     font-size: 11px;
   }
   
-  /* =========================================
-     DARK MODE - PAGE
-     ========================================= */
+  /*  DARK MODE - PAGE  */
   
   html[data-theme="dark"] .notes-page {
     background:
@@ -1056,9 +1014,7 @@
     color: #a4afc6;
   }
   
-  /* =========================================
-     DARK MODE - CARDS
-     ========================================= */
+  /*  DARK MODE - CARDS  */
   
   html[data-theme="dark"] .notes-form-card,
   html[data-theme="dark"] .notes-preview-card,
@@ -1078,9 +1034,7 @@
     color: #eeeaff;
   }
   
-  /* =========================================
-     DARK MODE - FORM
-     ========================================= */
+  /* DARK MODE - FORM */
   
   html[data-theme="dark"] .notes-form-group label {
     color: #d0d8e9;
@@ -1116,9 +1070,7 @@
     color: #9ba8c0;
   }
   
-  /* =========================================
-     DARK MODE - FILE UPLOAD
-     ========================================= */
+  /*  DARK MODE - FILE UPLOAD */
   
   html[data-theme="dark"] .notes-upload-area {
     border-color: #65518f;
@@ -1170,9 +1122,7 @@
     color: #f5c77d;
   }
   
-  /* =========================================
-     DARK MODE - GENERATE BUTTON
-     ========================================= */
+  /* DARK MODE - GENERATE BUTTON  */
   
   html[data-theme="dark"] .generate-notes-btn {
     background: linear-gradient(135deg, #9169f2, #6948d4);
@@ -1191,9 +1141,7 @@
     box-shadow: none;
   }
   
-  /* =========================================
-     DARK MODE - PREVIEW
-     ========================================= */
+  /* DARK MODE - PREVIEW */
   
   html[data-theme="dark"] .preview-heading > svg {
     color: #c4b5fd !important;
@@ -1215,9 +1163,7 @@
     color: #a2aec5;
   }
   
-  /* =========================================
-     DARK MODE - MARKDOWN
-     ========================================= */
+  /*  DARK MODE - MARKDOWN */
   
   html[data-theme="dark"] .generated-notes {
     color: #d2daea;
@@ -1291,9 +1237,7 @@
     background: #172136;
   }
   
-  /* =========================================
-     DARK MODE - DOWNLOAD AND STATUS
-     ========================================= */
+  /*  DARK MODE - DOWNLOAD AND STATUS */
   
   html[data-theme="dark"] .notes-download-btn {
     border-color: #514273;
@@ -1325,9 +1269,7 @@
     color: #f5c77d;
   }
   
-  /* =========================================
-     DARK MODE - SAVED NOTES
-     ========================================= */
+  /*   DARK MODE - SAVED NOTES */
   
   html[data-theme="dark"] .saved-notes-title h2 {
     color: #eeeaff;
@@ -1445,9 +1387,7 @@
     background: #8055e8;
   }
   
-  /* =========================================
-     ACCESSIBILITY
-     ========================================= */
+  /*  ACCESSIBILITY  */
   
   .notes-page button:focus-visible,
   .notes-page input:focus-visible,
@@ -1464,9 +1404,7 @@
     outline-color: #b49aff;
   }
   
-  /* =========================================
-     RESPONSIVE DESIGN
-     ========================================= */
+  /* RESPONSIVE DESIGN */
   
   @media (max-width: 1100px) {
     .saved-notes-grid {
@@ -1601,9 +1539,7 @@
     }
   }
   
-  /* =========================================
-     REDUCED MOTION
-     ========================================= */
+  /*  REDUCED MOTION */
   
   @media (prefers-reduced-motion: reduce) {
     .notes-page *,

@@ -1,7 +1,5 @@
 
-/* =========================================
-   STUDYMATE AI - AUTHENTICATION PAGE
-========================================= */
+/* STUDYMATE AI - AUTHENTICATION PAGE  */
 
 .auth-page {
   --auth-primary: #7054e8;
@@ -41,9 +39,7 @@
   box-sizing: border-box;
 }
 
-/* =========================================
-   BACKGROUND DECORATION
-========================================= */
+/* BACKGROUND DECORATIO */
 
 .auth-background-shape {
   position: absolute;
@@ -68,9 +64,7 @@
   border: 1px solid rgba(112, 84, 232, 0.12);
 }
 
-/* =========================================
-   HEADER / BRAND
-========================================= */
+/*   HEADER / BRAND  */
 
 .auth-header {
   width: 100%;
@@ -112,9 +106,7 @@
   font-weight: 500;
 }
 
-/* =========================================
-   MAIN LAYOUT
-========================================= */
+/*  MAIN LAYOUT */
 
 .auth-main {
   width: 100%;
@@ -131,9 +123,7 @@
   z-index: 1;
 }
 
-/* =========================================
-   LEFT INTRODUCTION PANEL
-========================================= */
+/*  LEFT INTRODUCTION PANEL */
 
 .auth-intro {
   max-width: 550px;
@@ -176,9 +166,7 @@
   line-height: 1.9;
 }
 
-/* =========================================
-   FEATURE LIST
-========================================= */
+/*  FEATURE LIST  */
 
 .auth-feature-list {
   display: flex;
@@ -230,9 +218,7 @@
   font-weight: 650;
 }
 
-/* =========================================
-   AUTHENTICATION CARD
-========================================= */
+/*  AUTHENTICATION CARD  */
 
 .auth-form-section {
   width: 100%;
@@ -296,9 +282,7 @@
   line-height: 1.7;
 }
 
-/* =========================================
-   LOGIN / REGISTER TABS
-========================================= */
+/*  LOGIN / REGISTER TABS */
 
 .auth-tabs {
   display: grid;
@@ -340,9 +324,7 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   INPUT FIELDS
-========================================= */
+/* INPUT FIELDS */
 
 .auth-input-group {
   margin-bottom: 19px;
@@ -454,9 +436,7 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   FORGOT PASSWORD
-========================================= */
+/*  FORGOT PASSWORD */
 
 .auth-forgot {
   display: flex;
@@ -490,9 +470,7 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   ERROR / SUCCESS MESSAGES
-========================================= */
+/* ERROR / SUCCESS MESSAGES */
 
 .auth-message {
   padding: 12px 13px;
@@ -516,9 +494,7 @@
   color: #23814d;
 }
 
-/* =========================================
-   SUBMIT BUTTON
-========================================= */
+/*  SUBMIT BUTTON */
 
 .auth-submit {
   width: 100%;
@@ -574,9 +550,7 @@
   animation: authSpin 0.8s linear infinite;
 }
 
-/* =========================================
-   DIVIDER / FOOTER
-========================================= */
+/*  DIVIDER / FOOTER */
 
 .auth-divider {
   display: flex;
@@ -638,9 +612,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   PAGE FOOTER
-========================================= */
+/*  PAGE FOOTER  */
 
 .auth-bottom-text {
   display: flex;
@@ -661,9 +633,7 @@
   color: #b4a8ec;
 }
 
-/* =========================================
-   LOADING SCREEN
-========================================= */
+/*  LOADING SCREEN  */
 
 .auth-loading {
   min-height: 100vh;
@@ -690,9 +660,7 @@
   animation: authSpin 0.8s linear infinite;
 }
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+/*  ANIMATIONS */
 
 @keyframes authSpin {
   to {
@@ -700,9 +668,7 @@
   }
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - TABLET
-========================================= */
+/*  RESPONSIVE DESIGN - TABLET */
 
 @media (max-width: 1000px) {
   .auth-page {
@@ -720,9 +686,7 @@
   }
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - MOBILE
-========================================= */
+/*  RESPONSIVE DESIGN - MOBILE  */
 
 @media (max-width: 760px) {
   .auth-page {
@@ -775,9 +739,7 @@
   }
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - SMALL MOBILE
-========================================= */
+/*  RESPONSIVE DESIGN - SMALL MOBILE  */
 
 @media (max-width: 500px) {
   .auth-page {
@@ -849,9 +811,7 @@
   }
 }
 
-/* =========================================
-   ACCESSIBILITY - REDUCED MOTION
-========================================= */
+/* ACCESSIBILITY - REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .auth-page *,

@@ -10,9 +10,7 @@ const MODELS = [
 const DEFAULT_TIMEOUT = 30000;
 const DEFAULT_OUTPUT_TOKENS = 8192;
 
-// ========================================
 // ERROR HELPERS
-// ========================================
 
 const getRetryTime = (message = "") => {
   const match = message.match(
@@ -77,9 +75,7 @@ const getFriendlyError = (error) => {
   return message || "Something went wrong while generating your response.";
 };
 
-// ========================================
 // GEMINI API REQUEST
-// ========================================
 
 const generateWithModel = async (
   model,
@@ -216,9 +212,7 @@ const generateWithModel = async (
   }
 };
 
-// ========================================
 // MAIN AI GENERATION FUNCTION
-// ========================================
 
 export const generateAIResponse = async (
   prompt,
@@ -257,11 +251,6 @@ export const generateAIResponse = async (
 
   const modelErrors = [];
 
-  // ========================================
-  // FAST MODEL FALLBACK
-  // One attempt per model by default.
-  // No unnecessary 1.5-second waiting.
-  // ========================================
 
   for (const model of models) {
     try {
@@ -321,9 +310,7 @@ export const generateAIResponse = async (
     }
   }
 
-  // ========================================
   // FINAL ERROR
-  // ========================================
 
   const lastError =
     modelErrors[modelErrors.length - 1];

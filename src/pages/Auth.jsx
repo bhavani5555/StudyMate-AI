@@ -38,18 +38,16 @@ function Auth() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  // ========================================
+
   // CLEAR MESSAGES
-  // ========================================
 
   const clearMessages = () => {
     setError("");
     setSuccess("");
   };
 
-  // ========================================
+ 
   // FIREBASE ERROR HANDLING
-  // ========================================
 
   const getFirebaseErrorMessage = (err) => {
     const messages = {
@@ -93,9 +91,7 @@ function Auth() {
     );
   };
 
-  // ========================================
   // SWITCH LOGIN / REGISTER
-  // ========================================
 
   const switchMode = (registerMode) => {
     if (loading || resetLoading) return;
@@ -107,9 +103,9 @@ function Auth() {
     clearMessages();
   };
 
-  // ========================================
+
   // LOGIN / REGISTER SUBMISSION
-  // ========================================
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -185,11 +181,6 @@ function Auth() {
         await loginUser(trimmedEmail, password);
       }
 
-      /*
-       * AuthContext listens to Firebase onAuthStateChanged.
-       * App.jsx routes authenticated users to the dashboard.
-       * No manual navigation is required here.
-       */
 
     } catch (err) {
       console.error("Authentication Error:", err);
@@ -201,10 +192,8 @@ function Auth() {
     }
   };
 
-  // ========================================
-  // FORGOT PASSWORD
-  // ========================================
 
+  // FORGOT PASSWORD
   const handleForgotPassword = async () => {
     if (resetLoading || loading) return;
 
@@ -243,10 +232,9 @@ function Auth() {
     }
   };
 
-  // ========================================
+  
   // UI
-  // ========================================
-
+  
   return (
     <div className="auth-page">
 

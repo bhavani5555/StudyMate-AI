@@ -1,7 +1,5 @@
 
-/* =========================================
-   NAVBAR SEARCH CONTAINER
-========================================= */
+/* NAVBAR SEARCH CONTAINER */
 
 .navbar-search-container {
   position: relative;
@@ -10,9 +8,7 @@
   flex: 0 1 300px;
 }
 
-/* =========================================
-   SEARCH INPUT
-========================================= */
+/*  SEARCH INPUT */
 
 .navbar-search {
   display: flex;
@@ -62,9 +58,7 @@
   font-size: 11px;
 }
 
-/* =========================================
-   SEARCH RESULTS DROPDOWN
-========================================= */
+/* SEARCH RESULTS DROPDOWN */
 
 .navbar-search-results {
   position: absolute;
@@ -101,9 +95,7 @@
   background: var(--hover-bg, #f3f4f6);
 }
 
-/* =========================================
-   SEARCH DARK MODE
-========================================= */
+/*  SEARCH DARK MODE  */
 
 [data-theme="dark"] .navbar-search {
   background: var(--card-bg, #1e293b);
@@ -131,9 +123,7 @@
   background: var(--hover-bg, #334155);
 }
 
-/* =========================================
-   TABLET RESPONSIVE
-========================================= */
+/*  TABLET RESPONSIVE  */
 
 @media (max-width: 900px) {
   .navbar-search-container {
@@ -143,9 +133,7 @@
   }
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 600px) {
   .navbar-search-container {
@@ -184,9 +172,7 @@
   }
 }
 
-/* =========================================
-   NOTIFICATION DROPDOWN
-========================================= */
+/*  NOTIFICATION DROPDOWN  */
 
 .navbar-notification-wrapper {
   position: relative;
@@ -259,9 +245,7 @@
   text-align: center;
 }
 
-/* =========================================
-   NOTIFICATION DARK MODE
-========================================= */
+/*  NOTIFICATION DARK MODE  */
 
 [data-theme="dark"] .notification-dropdown {
   background: #1e293b !important;
@@ -303,9 +287,7 @@
   text-align: center;
 }
 
-/* =========================================
-   NOTIFICATION MOBILE RESPONSIVE
-========================================= */
+/*  NOTIFICATION MOBILE RESPONSIVE  */
 
 @media (max-width: 600px) {
   .notification-dropdown {

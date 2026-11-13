@@ -28,9 +28,7 @@ import { useAuth } from "./context/AuthContext.jsx";
 
 import "./App.css";
 
-/* =====================================
-   APPLY SAVED THEME
-===================================== */
+/* APPLY SAVED THEME  */
 
 function applySavedTheme() {
   try {
@@ -53,9 +51,7 @@ function applySavedTheme() {
 
 applySavedTheme();
 
-/* =====================================
-   LOADING SCREEN
-===================================== */
+/*  LOADING SCREEN  */
 
 function AuthLoading() {
   return (
@@ -66,9 +62,7 @@ function AuthLoading() {
   );
 }
 
-/* =====================================
-   PROTECTED LAYOUT
-===================================== */
+/*  PROTECTED LAYOUT */
 
 function ProtectedLayout() {
   const { user, loading } = useAuth();
@@ -127,9 +121,7 @@ function ProtectedLayout() {
   );
 }
 
-/* =====================================
-   PUBLIC ROUTE
-===================================== */
+/* PUBLIC ROUTE  */
 
 function PublicRoute({ children }) {
   const { user, loading } = useAuth();
@@ -145,9 +137,7 @@ function PublicRoute({ children }) {
   return children;
 }
 
-/* =====================================
-   MAIN APP
-===================================== */
+/* MAIN APP */
 
 function App() {
   return (

@@ -62,9 +62,7 @@ const WELCOME_SUGGESTIONS = [
   }
 ];
 
-/* =====================================
-   CHAT HELPERS
-===================================== */
+/* CHAT HELPERS */
 
 const createChat = () => {
   const now = new Date().toISOString();
@@ -166,9 +164,7 @@ function createMessage(role, text) {
   };
 }
 
-/* =====================================
-   COMPONENT
-===================================== */
+/* COMPONENT  */
 
 function AITutor() {
   const [chats, setChats] = useState([]);
@@ -205,9 +201,7 @@ function AITutor() {
 
   const messages = activeChat?.messages || [];
 
-  /* =====================================
-     LOAD CHATS
-  ===================================== */
+  /*  LOAD CHATS */
 
   const loadChats = useCallback(async (force = false) => {
     if (loadStartedRef.current && !force) return;
@@ -291,9 +285,7 @@ function AITutor() {
     };
   }, [loadChats]);
 
-  /* =====================================
-     AUTO SCROLL
-  ===================================== */
+  /*  AUTO SCROLL  */
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({
@@ -302,9 +294,7 @@ function AITutor() {
     });
   }, [messages, loading]);
 
-  /* =====================================
-     RENAME INPUT FOCUS
-  ===================================== */
+  /*   RENAME INPUT FOCUS  */
 
   useEffect(() => {
     if (renameChatId !== null) {
@@ -313,9 +303,7 @@ function AITutor() {
     }
   }, [renameChatId]);
 
-  /* =====================================
-     SIDEBAR RESIZING
-  ===================================== */
+  /*  SIDEBAR RESIZING */
 
   useEffect(() => {
     if (!isResizing) return;
@@ -367,9 +355,7 @@ function AITutor() {
     setIsResizing(true);
   };
 
-  /* =====================================
-     UPDATE CHAT
-  ===================================== */
+  /* UPDATE CHAT  */
 
   const updateChat = async (chatId, updates) => {
     try {
@@ -403,9 +389,7 @@ function AITutor() {
     }
   };
 
-  /* =====================================
-     NEW CHAT
-  ===================================== */
+  /*   NEW CHAT */
 
   const newChat = async () => {
     if (sendingRef.current || loadingChats) return;
@@ -438,9 +422,7 @@ function AITutor() {
     }
   };
 
-  /* =====================================
-     SELECT CHAT
-  ===================================== */
+  /*  SELECT CHAT */
 
   const selectChat = (chatId) => {
     if (sendingRef.current) return;
@@ -450,9 +432,7 @@ function AITutor() {
     setOpenMenuId(null);
   };
 
-  /* =====================================
-     BUILD AI PROMPT
-  ===================================== */
+  /*  BUILD AI PROMPT */
 
   const buildPrompt = (history, question) => {
     const previousHistory = history
@@ -493,9 +473,7 @@ Provide a helpful and accurate answer.
 `;
   };
 
-  /* =====================================
-     SEND MESSAGE
-  ===================================== */
+  /*   SEND MESSAGE */
 
   const sendMessage = async (event, suggestedQuestion = null) => {
     event?.preventDefault();
@@ -642,9 +620,7 @@ Provide a helpful and accurate answer.
     }
   };
 
-  /* =====================================
-     RENAME CHAT
-  ===================================== */
+  /*  RENAME CHAT */
 
   const openRenameModal = (chat) => {
     setRenameChatId(chat.id);
@@ -669,9 +645,7 @@ Provide a helpful and accurate answer.
     }
   };
 
-  /* =====================================
-     PIN / UNPIN CHAT
-  ===================================== */
+  /*  PIN / UNPIN CHAT */
 
   const togglePin = async (chat) => {
     const success = await updateChat(chat.id, {
@@ -683,9 +657,7 @@ Provide a helpful and accurate answer.
     }
   };
 
-  /* =====================================
-     DELETE CHAT
-  ===================================== */
+  /*  DELETE CHAT */
 
   const deleteChat = async (chatId) => {
     if (sendingRef.current) return;
@@ -734,9 +706,7 @@ Provide a helpful and accurate answer.
     }
   };
 
-  /* =====================================
-     DERIVED CHAT LISTS
-  ===================================== */
+  /*  DERIVED CHAT LISTS */
 
   const pinnedChats = sortChats(
     chats.filter((chat) => chat.pinned)
@@ -746,9 +716,7 @@ Provide a helpful and accurate answer.
     chats.filter((chat) => !chat.pinned)
   );
 
-  /* =====================================
-     RENDER
-  ===================================== */
+  /*  RENDER  */
 
   return (
     <div
@@ -1146,9 +1114,7 @@ Provide a helpful and accurate answer.
   );
 }
 
-/* =====================================
-   HISTORY ITEM
-===================================== */
+/*  HISTORY ITEM  */
 
 function HistoryItem({
   chat,

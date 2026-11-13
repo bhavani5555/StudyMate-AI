@@ -1,7 +1,5 @@
 
-/* =====================================
-   ACHIEVEMENTS PAGE
-===================================== */
+/*  ACHIEVEMENTS PAGE  */
 
 .achievements-page {
   min-height: calc(100vh - 110px);
@@ -297,9 +295,7 @@
   line-height: 1.5;
 }
 
-/* =====================================
-   ACHIEVEMENT UNLOCK CELEBRATION
-===================================== */
+/*  ACHIEVEMENT UNLOCK CELEBRATION  */
 
 .achievement-celebration-toast {
   position: fixed;
@@ -409,9 +405,7 @@
   }
 }
 
-/* =====================================
-   ACHIEVEMENT DETAILS BUTTON
-===================================== */
+/*  ACHIEVEMENT DETAILS BUTTON */
 
 .achievement-details-button {
   width: 100%;
@@ -438,9 +432,7 @@
   transform: translateY(-1px);
 }
 
-/* =====================================
-   ACHIEVEMENT DETAILS MODAL
-===================================== */
+/*  ACHIEVEMENT DETAILS MODAL  */
 
 .achievement-modal-backdrop {
   position: fixed;
@@ -671,9 +663,7 @@
   }
 }
 
-/* =====================================
-   ACHIEVEMENT FILTERS
-===================================== */
+/*  ACHIEVEMENT FILTERS  */
 
 .achievement-filters {
   margin-bottom: 24px;
@@ -777,9 +767,7 @@
   cursor: pointer;
 }
 
-/* =====================================
-   ACHIEVEMENT UNLOCK HISTORY
-===================================== */
+/*  ACHIEVEMENT UNLOCK HISTORY  */
 
 .achievement-history-section {
   margin-top: 34px;
@@ -915,9 +903,7 @@
   font-size: 13px;
 }
 
-/* =====================================
-   DARK MODE
-===================================== */
+/*  DARK MODE  */
 
 /* Main Page */
 
@@ -1099,9 +1085,7 @@
   color: #c3b5ff;
 }
 
-/* =====================================
-   RESPONSIVE DESIGN
-===================================== */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 1050px) {
   .achievement-grid {
@@ -1193,9 +1177,7 @@
   }
 }
 
-/* =====================================
-   ACCESSIBILITY
-===================================== */
+/*  ACCESSIBILITY  */
 
 .achievement-details-button:focus-visible,
 .achievement-modal-close:focus-visible,
@@ -1207,9 +1189,7 @@
   outline-offset: 3px;
 }
 
-/* =====================================
-   REDUCED MOTION
-===================================== */
+/*  REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .achievement-card,

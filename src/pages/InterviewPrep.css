@@ -1,7 +1,5 @@
 
-/* =========================================
-   INTERVIEW PREPARATION - BASE
-========================================= */
+/*  INTERVIEW PREPARATION  */
 
 .interview-page {
   min-height: calc(100vh - 110px);
@@ -17,9 +15,7 @@
   font: inherit;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 
 .interview-header {
   display: flex;
@@ -55,9 +51,7 @@
   border-radius: 14px;
 }
 
-/* =========================================
-   STATISTICS
-========================================= */
+/* STATISTICS  */
 
 .interview-stats {
   display: grid;
@@ -116,9 +110,7 @@
   color: #16a34a;
 }
 
-/* =========================================
-   CONFIGURATION
-========================================= */
+/* CONFIGURATION */
 
 .interview-config {
   max-width: 1120px;
@@ -208,9 +200,7 @@
   pointer-events: none;
 }
 
-/* =========================================
-   GENERATE BUTTON
-========================================= */
+/*  GENERATE BUTTON */
 
 .generate-interview-btn {
   display: flex;
@@ -243,9 +233,7 @@
   box-shadow: none;
 }
 
-/* =========================================
-   ERROR MESSAGE
-========================================= */
+/*  ERROR MESSAGE */
 
 .interview-error-message {
   color: #dc2626;
@@ -258,9 +246,7 @@
   margin: 14px 0 0;
 }
 
-/* =========================================
-   LOADING STATE
-========================================= */
+/*  LOADING STATE  */
 
 .interview-loading {
   display: flex;
@@ -294,9 +280,7 @@
   }
 }
 
-/* =========================================
-   QUESTIONS SECTION
-========================================= */
+/*  QUESTIONS SECTION  */
 
 .interview-questions-section {
   max-width: 1120px;
@@ -344,9 +328,7 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   PRACTICE PROGRESS
-========================================= */
+/*  PRACTICE PROGRESS  */
 
 .interview-progress {
   background: #ffffff;
@@ -382,9 +364,7 @@
   transition: width 0.3s ease;
 }
 
-/* =========================================
-   COMPLETION MESSAGE
-========================================= */
+/*  COMPLETION MESSAGE */
 
 .interview-completion-message {
   display: flex;
@@ -409,9 +389,7 @@
   margin: 0;
 }
 
-/* =========================================
-   QUESTION CARDS
-========================================= */
+/*  QUESTION CARDS */
 
 .interview-question-card {
   background: #ffffff;
@@ -457,9 +435,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   SHOW / HIDE ANSWER
-========================================= */
+/*  SHOW / HIDE ANSWER */
 
 .show-answer-btn,
 .mark-completed-btn {
@@ -487,9 +463,7 @@
   transform: translateY(-1px);
 }
 
-/* =========================================
-   ANSWER SECTION
-========================================= */
+/*  ANSWER SECTION */
 
 .interview-answer {
   margin-top: 18px;
@@ -513,9 +487,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   MARK COMPLETED
-========================================= */
+/*   MARK COMPLETED  */
 
 .mark-completed-btn {
   background: #dcfce7;
@@ -533,9 +505,7 @@
   transform: none;
 }
 
-/* =========================================
-   KEYBOARD ACCESSIBILITY
-========================================= */
+/*  KEYBOARD ACCESSIBILITY  */
 
 .interview-page button:focus-visible,
 .interview-page select:focus-visible {
@@ -543,9 +513,7 @@
   outline-offset: 3px;
 }
 
-/* =========================================
-   PREMIUM DARK MODE
-========================================= */
+/*  PREMIUM DARK MODE */
 
 html[data-theme="dark"] .interview-page {
   color: #e2e8f0;
@@ -816,9 +784,7 @@ html[data-theme="dark"] .interview-page select:focus-visible {
   outline-color: #a78bfa;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/*  RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
   .interview-stats {
@@ -948,9 +914,7 @@ html[data-theme="dark"] .interview-page select:focus-visible {
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .interview-page *,

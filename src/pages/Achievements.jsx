@@ -34,9 +34,7 @@ import "./Achievements.css";
 const CELEBRATED_KEY = "studymate-celebrated-achievements";
 const UNLOCK_HISTORY_KEY = "studymate-achievement-history";
 
-/* =====================================
-   STORAGE HELPERS
-===================================== */
+/* STORAGE HELPERS */
 
 function readLocalArray(key) {
   try {
@@ -55,9 +53,7 @@ function readLegacyUnlockHistory() {
   return readLocalArray(UNLOCK_HISTORY_KEY) || [];
 }
 
-/* =====================================
-   DATE HELPERS
-===================================== */
+/*  DATE HELPERS */
 
 function getDateKey(date) {
   return [
@@ -122,9 +118,7 @@ function getSortedCreationDates(items = []) {
     .sort((a, b) => a - b);
 }
 
-/* =====================================
-   ACHIEVEMENT DATA
-===================================== */
+/* ACHIEVEMENT DATA */
 
 function getAchievementData(cloudData, studyData) {
   const notes = Array.isArray(cloudData.notes)
@@ -215,9 +209,7 @@ function getAchievementData(cloudData, studyData) {
   ];
 }
 
-/* =====================================
-   INFER UNLOCK DATES
-===================================== */
+/*  INFER UNLOCK DATES */
 
 function inferAchievementUnlockDate(id, cloudData, studyData) {
   const notes = cloudData.notes || [];
@@ -305,9 +297,7 @@ function inferAchievementUnlockDate(id, cloudData, studyData) {
   return null;
 }
 
-/* =====================================
-   COMPONENT
-===================================== */
+/*  COMPONENT */
 
 function Achievements() {
   const { user } = useAuth();
@@ -352,9 +342,7 @@ function Achievements() {
 
   const saveQueueRef = useRef(Promise.resolve());
 
-  /* =====================================
-     LOAD FIRESTORE DATA
-  ===================================== */
+  /*  LOAD FIRESTORE DATA */
 
   const loadCloudData = async (loadAchievementState = false) => {
     if (!user?.uid) {
@@ -445,9 +433,7 @@ function Achievements() {
     }
   };
 
-  /* =====================================
-     INITIAL LOAD AND REFRESH
-  ===================================== */
+  /*  INITIAL LOAD AND REFRESH */
 
   useEffect(() => {
     if (!user?.uid) return;
@@ -493,17 +479,13 @@ function Achievements() {
     };
   }, [user?.uid]);
 
-  /* =====================================
-     UPDATE ACHIEVEMENT COUNTS
-  ===================================== */
+  /*  UPDATE ACHIEVEMENT COUNTS  */
 
   useEffect(() => {
     setAchievements(getAchievementData(cloudData, studyData));
   }, [cloudData, studyData]);
 
-  /* =====================================
-     INITIALIZE CELEBRATION HISTORY
-  ===================================== */
+  /*   INITIALIZE CELEBRATION HISTORY */
 
   useEffect(() => {
     if (cloudLoading || cloudError) return;
@@ -522,9 +504,7 @@ function Achievements() {
     celebratedIds
   ]);
 
-  /* =====================================
-     SAVE NEW UNLOCK HISTORY
-  ===================================== */
+  /*   SAVE NEW UNLOCK HISTORY */
 
   useEffect(() => {
     if (cloudLoading || cloudError) return;
@@ -589,9 +569,7 @@ function Achievements() {
     achievementStateReady
   ]);
 
-  /* =====================================
-     DETECT NEW ACHIEVEMENTS
-  ===================================== */
+  /*  DETECT NEW ACHIEVEMENTS */
 
   useEffect(() => {
     if (cloudLoading || cloudError) return;
@@ -624,9 +602,7 @@ function Achievements() {
     achievementStateReady
   ]);
 
-  /* =====================================
-     SAVE ACHIEVEMENT STATE
-  ===================================== */
+  /* SAVE ACHIEVEMENT STATE */
 
   useEffect(() => {
     if (!achievementStateReady || celebratedIds === null) return;
@@ -650,9 +626,7 @@ function Achievements() {
     achievementStateReady
   ]);
 
-  /* =====================================
-     CELEBRATION QUEUE
-  ===================================== */
+  /*  CELEBRATION QUEUE */
 
   useEffect(() => {
     if (activeCelebration || celebrationQueue.length === 0) {
@@ -664,9 +638,7 @@ function Achievements() {
     setCelebrationQueue((previous) => previous.slice(1));
   }, [activeCelebration, celebrationQueue]);
 
-  /* =====================================
-     AUTO HIDE CELEBRATION
-  ===================================== */
+  /*  AUTO HIDE CELEBRATION  */
 
   useEffect(() => {
     if (!activeCelebration) return;
@@ -678,9 +650,7 @@ function Achievements() {
     return () => clearTimeout(timeout);
   }, [activeCelebration]);
 
-  /* =====================================
-     CLOSE MODAL WITH ESCAPE
-  ===================================== */
+  /*  CLOSE MODAL WITH ESCAPE */
 
   useEffect(() => {
     if (!selectedAchievement) return;
@@ -698,9 +668,7 @@ function Achievements() {
     };
   }, [selectedAchievement]);
 
-  /* =====================================
-     PROGRESS AND FILTERS
-  ===================================== */
+  /*  PROGRESS AND FILTERS  */
 
   const unlockedCount = achievements.filter(
     (item) => item.unlocked
@@ -756,9 +724,7 @@ function Achievements() {
         getUnlockTimestamp(b.id) - getUnlockTimestamp(a.id)
     );
 
-  /* =====================================
-     RENDER
-  ===================================== */
+  /*  RENDER */
 
   return (
     <main className="achievements-page">

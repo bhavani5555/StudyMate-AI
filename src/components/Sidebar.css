@@ -1,7 +1,5 @@
 
-/* =========================================
-   SIDEBAR - BASE STYLES
-========================================= */
+/*  SIDEBAR - BASE STYLES */
 
 .sidebar {
   width: 260px;
@@ -179,9 +177,7 @@
   color: #d93649;
 }
 
-/* =========================================
-   SIDEBAR - DARK MODE
-========================================= */
+/*  SIDEBAR - DARK MODE */
 
 html[data-theme="dark"] .sidebar {
   background:
@@ -296,10 +292,7 @@ html[data-theme="dark"] .sidebar-close-btn {
   color: #d1d8e8;
 }
 
-/* =========================================
-   TABLET - COMPACT SIDEBAR
-   601px to 900px
-========================================= */
+/*  TABLET - COMPACT SIDEBAR  */
 
 @media (min-width: 601px) and (max-width: 900px) {
   .app-container .sidebar {
@@ -335,10 +328,7 @@ html[data-theme="dark"] .sidebar-close-btn {
   }
 }
 
-/* =========================================
-   MOBILE - SLIDE OUT DRAWER
-   600px and below
-========================================= */
+/*  MOBILE - SLIDE OUT DRAWER  */
 
 @media (max-width: 600px) {
   .app-container .sidebar {
@@ -435,9 +425,7 @@ html[data-theme="dark"] .sidebar-close-btn {
   }
 }
 
-/* =========================================
-   MOBILE OVERLAY DEFAULT
-========================================= */
+/*  MOBILE OVERLAY DEFAULT */
 
 .sidebar-overlay {
   display: none;

@@ -26,9 +26,7 @@ import {
 
 import "./Settings.css";
 
-/* =========================================
-   LOCAL SETTINGS
-========================================= */
+/*  LOCAL SETTINGS */
 
 const getSavedSettings = (uid) => {
   try {
@@ -54,9 +52,7 @@ const getSavedSettings = (uid) => {
   }
 };
 
-/* =========================================
-   DOMAIN OPTIONS
-========================================= */
+/* DOMAIN OPTIONS */
 
 const domainOptions = [
   "Java",
@@ -86,9 +82,7 @@ const domainOptions = [
 
 const difficultyOptions = ["Easy", "Medium", "Hard"];
 
-/* =========================================
-   SETTINGS COMPONENT
-========================================= */
+/* SETTINGS COMPONENT */
 
 function Settings() {
   const { user } = useAuth();
@@ -118,18 +112,14 @@ function Settings() {
   // Prevent duplicate cloud save requests.
   const saveLockRef = useRef(false);
 
-  /* =========================================
-     CLEAR FEEDBACK
-  ========================================= */
+  /* CLEAR FEEDBACK */
 
   const clearFeedback = () => {
     setSaveMessage("");
     setMessageType("");
   };
 
-  /* =========================================
-     LOAD SETTINGS FROM FIRESTORE
-  ========================================= */
+  /*LOAD SETTINGS FROM FIRESTORE */
 
   useEffect(() => {
     let isMounted = true;
@@ -239,9 +229,7 @@ function Settings() {
     };
   }, [user?.uid, user?.email, user?.displayName]);
 
-  /* =========================================
-     SAVE SETTINGS
-  ========================================= */
+  /* SAVE SETTINGS */
 
   const handleSave = async () => {
     if (saveLockRef.current || saving) return;
@@ -331,9 +319,7 @@ function Settings() {
     }
   };
 
-  /* =========================================
-     INPUT HANDLERS
-  ========================================= */
+  /* INPUT HANDLERS  */
 
   const handleNameChange = (value) => {
     setUserName(value);
@@ -350,9 +336,7 @@ function Settings() {
     clearFeedback();
   };
 
-  /* =========================================
-     RENDER
-  ========================================= */
+  /* RENDER */
 
   return (
     <div className="settings-page">

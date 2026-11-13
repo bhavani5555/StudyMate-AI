@@ -1,7 +1,5 @@
 
-/* =========================================
-   FLASHCARDS PAGE
-========================================= */
+/* FLASHCARDS PAGE */
 
 .flashcards-page,
 .flashcards-page * {
@@ -22,9 +20,7 @@
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+/*  HEADER  */
 
 .flashcards-header {
   position: relative;
@@ -131,9 +127,7 @@
   transform: translateY(-2px);
 }
 
-/* =========================================
-   LEARNING OVERVIEW
-========================================= */
+/* LEARNING OVERVIEW */
 
 .flashcards-overview {
   max-width: 1320px;
@@ -241,9 +235,7 @@
   line-height: 1.45;
 }
 
-/* =========================================
-   CONFIGURATION CARD
-========================================= */
+/*  CONFIGURATION CARD  */
 
 .flashcards-config-card {
   position: relative;
@@ -356,10 +348,7 @@
   color: #36334c;
 }
 
-/* =========================================
-   AI FLASHCARD REQUEST INPUT
-   Matches Quiz Generator
-========================================= */
+/* AI FLASHCARD REQUEST INPUT */
 
 .flashcards-request-input {
   display: block;
@@ -468,9 +457,7 @@
   line-height: 1.5;
 }
 
-/* =========================================
-   GENERATED DECK DETAILS
-========================================= */
+/*  GENERATED DECK DETAILS */
 
 .flashcards-topic {
   min-width: 0;
@@ -531,9 +518,7 @@
   padding: 0 3px;
 }
 
-/* =========================================
-   REVIEW PROGRESS
-========================================= */
+/*   REVIEW PROGRESS */
 
 .flashcards-progress {
   margin-bottom: 21px;
@@ -587,9 +572,7 @@
   transition: width 0.35s ease;
 }
 
-/* =========================================
-   FLASHCARD STUDY AREA
-========================================= */
+/* FLASHCARD STUDY AREA */
 
 .flashcard-section {
   max-width: 100%;
@@ -633,9 +616,7 @@
   color: #9488c8;
 }
 
-/* =========================================
-   FLASHCARD
-========================================= */
+/* FLASHCARD */
 
 .flashcard-scene {
   width: 100%;
@@ -763,9 +744,7 @@
   text-align: center;
 }
 
-/* =========================================
-   LEARNING ACTIONS
-========================================= */
+/*  LEARNING ACTIONS  */
 
 .flashcard-actions {
   display: flex;
@@ -818,9 +797,7 @@
   transform: translateY(-1px);
 }
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/*  NAVIGATION  */
 
 .flashcard-navigation {
   display: flex;
@@ -891,9 +868,7 @@
   color: #5540bd;
 }
 
-/* =========================================
-   COMPLETION SCREEN
-========================================= */
+/*  COMPLETION SCREEN  */
 
 .flashcards-completion {
   max-width: 760px;
@@ -1000,9 +975,7 @@
   padding: 0 17px;
 }
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
+/*  ACCESSIBILITY  */
 
 .flashcards-page button:focus-visible,
 .flashcards-page select:focus-visible {
@@ -1010,9 +983,7 @@
   outline-offset: 3px;
 }
 
-/* =========================================
-   DARK MODE
-========================================= */
+/*  DARK MODE  */
 
 html[data-theme="dark"] .flashcards-page {
   background:
@@ -1348,9 +1319,7 @@ html[data-theme="dark"] .flashcards-page select:focus-visible {
   outline-color: #a78bfa;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/*  RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
   .flashcards-page {
@@ -1601,9 +1570,7 @@ html[data-theme="dark"] .flashcards-page select:focus-visible {
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/*  REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .flashcards-page *,

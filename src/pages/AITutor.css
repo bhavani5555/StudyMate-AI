@@ -1,7 +1,5 @@
 
-/* =========================================
-   AI TUTOR - MAIN LAYOUT
-========================================= */
+/*  AI TUTOR - MAIN LAYOUT   */
 
 .ai-tutor-page {
   --chat-sidebar-width: 340px;
@@ -26,9 +24,7 @@
   grid-template-columns: 0 0 minmax(0, 1fr);
 }
 
-/* =========================================
-   CHAT HISTORY SIDEBAR
-========================================= */
+/*  CHAT HISTORY SIDEBAR */
 
 .ai-chat-sidebar {
   display: flex;
@@ -327,9 +323,7 @@
   font-size: 11px;
 }
 
-/* =========================================
-   SIDEBAR RESIZE HANDLE
-========================================= */
+/* SIDEBAR RESIZE HANDLE  */
 
 .ai-sidebar-resize-handle {
   position: relative;
@@ -374,9 +368,7 @@
   visibility: hidden;
 }
 
-/* =========================================
-   MAIN CHAT AREA
-========================================= */
+/*  MAIN CHAT AREA  */
 
 .ai-chat-main {
   display: flex;
@@ -389,9 +381,7 @@
   background: #ffffff;
 }
 
-/* =========================================
-   TOPBAR
-========================================= */
+/* TOPBAR */
 
 .ai-chat-topbar {
   display: flex;
@@ -503,9 +493,7 @@
   cursor: pointer;
 }
 
-/* =========================================
-   CHAT CONTENT
-========================================= */
+/* CHAT CONTENT */
 
 .ai-chat-content {
   display: flex;
@@ -623,9 +611,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   CHAT MESSAGES
-========================================= */
+/* CHAT MESSAGES */
 
 .chat-messages {
   width: 100%;
@@ -741,9 +727,7 @@
   }
 }
 
-/* =========================================
-   MARKDOWN FORMATTING
-========================================= */
+/*  MARKDOWN FORMATTING */
 
 .message-bubble h1,
 .message-bubble h2,
@@ -846,9 +830,7 @@
   margin-bottom: 0;
 }
 
-/* =========================================
-   MESSAGE INPUT
-========================================= */
+/* MESSAGE INPUT */
 
 .ai-input-section {
   flex-shrink: 0;
@@ -934,9 +916,7 @@
   text-align: center;
 }
 
-/* =========================================
-   RENAME MODAL
-========================================= */
+/*  RENAME MODAL  */
 
 .rename-modal-overlay {
   position: fixed;
@@ -1040,9 +1020,7 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+/*  ANIMATIONS */
 
 .spin-icon {
   animation: aiSpin 1s linear infinite;
@@ -1054,9 +1032,7 @@
   }
 }
 
-/* =========================================
-   DARK MODE - SIDEBAR
-========================================= */
+/* DARK MODE - SIDEBAR */
 
 html[data-theme="dark"] .ai-tutor-page {
   background: #0c1220;
@@ -1182,9 +1158,7 @@ html[data-theme="dark"] .sidebar-footer span {
   color: #929fb8;
 }
 
-/* =========================================
-   DARK MODE - RESIZE HANDLE
-========================================= */
+/*  DARK MODE - RESIZE HANDLE */
 
 html[data-theme="dark"] .ai-sidebar-resize-handle span {
   background: #475569;
@@ -1200,9 +1174,7 @@ html[data-theme="dark"] .ai-sidebar-resize-handle.resizing span {
   background: #a78bfa;
 }
 
-/* =========================================
-   DARK MODE - MAIN CHAT
-========================================= */
+/*   DARK MODE - MAIN CHAT  */
 
 html[data-theme="dark"] .ai-chat-main {
   background: #0c1220;
@@ -1252,9 +1224,7 @@ html[data-theme="dark"] .ai-cloud-error {
   color: #ffb4bc;
 }
 
-/* =========================================
-   DARK MODE - CHAT CONTENT
-========================================= */
+/* DARK MODE - CHAT CONTENT */
 
 html[data-theme="dark"] .ai-chat-content {
   background:
@@ -1319,9 +1289,7 @@ html[data-theme="dark"] .welcome-suggestion-card span {
   color: #a4afc6;
 }
 
-/* =========================================
-   DARK MODE - MESSAGES
-========================================= */
+/*  DARK MODE - MESSAGES */
 
 html[data-theme="dark"] .message-row.assistant .message-avatar {
   background: rgba(139, 92, 246, 0.2);
@@ -1362,9 +1330,7 @@ html[data-theme="dark"] .typing-indicator span {
   background: #b49aff;
 }
 
-/* =========================================
-   DARK MODE - MARKDOWN
-========================================= */
+/*  DARK MODE - MARKDOWN  */
 
 html[data-theme="dark"] .message-row.assistant .message-bubble h1,
 html[data-theme="dark"] .message-row.assistant .message-bubble h2,
@@ -1403,9 +1369,7 @@ html[data-theme="dark"] .message-bubble blockquote {
   color: #aebbd1;
 }
 
-/* =========================================
-   DARK MODE - INPUT
-========================================= */
+/*   DARK MODE - INPUT */
 
 html[data-theme="dark"] .ai-input-section {
   background: #101827;
@@ -1453,9 +1417,7 @@ html[data-theme="dark"] .ai-input-section > p {
   color: #8492a9;
 }
 
-/* =========================================
-   DARK MODE - RENAME MODAL
-========================================= */
+/*  DARK MODE - RENAME MODAL */
 
 html[data-theme="dark"] .rename-modal-overlay {
   background: rgba(3, 7, 18, 0.75);
@@ -1506,9 +1468,7 @@ html[data-theme="dark"] .rename-save-btn {
   color: #ffffff;
 }
 
-/* =========================================
-   RESIZE CURSOR
-========================================= */
+/*  RESIZE CURSOR */
 
 body.ai-sidebar-resizing,
 body.ai-sidebar-resizing * {
@@ -1516,9 +1476,7 @@ body.ai-sidebar-resizing * {
   user-select: none !important;
 }
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
+/*  ACCESSIBILITY */
 
 .ai-tutor-page button:focus-visible,
 .ai-input-box input:focus-visible {
@@ -1531,9 +1489,7 @@ html[data-theme="dark"] .ai-tutor-page input:focus-visible {
   outline-color: #b49aff;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - TABLET
-========================================= */
+/*  RESPONSIVE DESIGN - TABLET */
 
 @media (max-width: 1050px) and (min-width: 751px) {
   .ai-tutor-page {
@@ -1553,9 +1509,7 @@ html[data-theme="dark"] .ai-tutor-page input:focus-visible {
   }
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - SMALL TABLET
-========================================= */
+/*  RESPONSIVE DESIGN - SMALL TABLET */
 
 @media (max-width: 750px) and (min-width: 551px) {
   .ai-tutor-page {
@@ -1621,9 +1575,7 @@ html[data-theme="dark"] .ai-tutor-page input:focus-visible {
   }
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - MOBILE
-========================================= */
+/*  RESPONSIVE DESIGN - MOBILE  */
 
 @media (max-width: 550px) {
   .ai-tutor-page,
@@ -1749,9 +1701,7 @@ html[data-theme="dark"] .ai-tutor-page input:focus-visible {
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .ai-tutor-page,

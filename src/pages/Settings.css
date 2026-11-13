@@ -1,7 +1,5 @@
 
-/* =========================================
-   SETTINGS PAGE
-========================================= */
+/* SETTINGS PAGE  */
 
 .settings-page,
 .settings-page * {
@@ -20,9 +18,7 @@
   color: #1e293b;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 
 .settings-header {
   display: flex;
@@ -65,9 +61,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   LOADING
-========================================= */
+/* LOADING */
 
 .settings-loading {
   display: flex;
@@ -94,9 +88,7 @@
   }
 }
 
-/* =========================================
-   CARDS
-========================================= */
+/* CARDS */
 
 .settings-card {
   min-width: 0;
@@ -116,9 +108,7 @@
   box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
 }
 
-/* =========================================
-   CARD HEADING
-========================================= */
+/* CARD HEADING */
 
 .settings-card-title {
   display: flex;
@@ -181,9 +171,7 @@
   color: #db2777;
 }
 
-/* =========================================
-   FORM GRID
-========================================= */
+/* FORM GRID */
 
 .settings-form-grid {
   display: grid;
@@ -262,9 +250,7 @@
   line-height: 1.5;
 }
 
-/* =========================================
-   EMAIL INPUT ICON
-========================================= */
+/* EMAIL INPUT ICON */
 
 .settings-input-with-icon {
   position: relative;
@@ -284,9 +270,7 @@
   padding-left: 40px;
 }
 
-/* =========================================
-   ACCOUNT NOTE
-========================================= */
+/* ACCOUNT NOTE */
 
 .settings-account-note {
   display: flex;
@@ -308,9 +292,7 @@
   color: #16a34a;
 }
 
-/* =========================================
-   STUDY PREFERENCE SUMMARY
-========================================= */
+/*  STUDY PREFERENCE SUMMARY */
 
 .settings-preference-grid {
   display: grid;
@@ -359,9 +341,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   HELP AND SUPPORT
-========================================= */
+/* HELP AND SUPPORT  */
 
 .settings-help-content {
   display: flex;
@@ -388,9 +368,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   ABOUT
-========================================= */
+/* ABOUT */
 
 .settings-description {
   margin: 0;
@@ -419,9 +397,7 @@
   font-size: 13px;
 }
 
-/* =========================================
-   SAVE FEEDBACK
-========================================= */
+/* SAVE FEEDBACK */
 
 .settings-save-message {
   display: flex;
@@ -452,9 +428,7 @@
   margin-top: 1px;
 }
 
-/* =========================================
-   SAVE BUTTON
-========================================= */
+/*  SAVE BUTTON  */
 
 .settings-actions {
   display: flex;
@@ -499,9 +473,7 @@
   box-shadow: none;
 }
 
-/* =========================================
-   DARK THEME
-========================================= */
+/*  DARK THEME */
 
 html[data-theme="dark"] .settings-page {
   background: #0b1120;
@@ -692,9 +664,7 @@ html[data-theme="dark"] .settings-save-btn:hover:not(:disabled) {
   box-shadow: 0 5px 15px rgba(109, 93, 252, 0.24);
 }
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
+/*  ACCESSIBILITY */
 
 .settings-page button:focus-visible,
 .settings-page input:focus-visible,
@@ -703,9 +673,7 @@ html[data-theme="dark"] .settings-save-btn:hover:not(:disabled) {
   outline-offset: 3px;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 850px) {
   .settings-page {
@@ -824,9 +792,7 @@ html[data-theme="dark"] .settings-save-btn:hover:not(:disabled) {
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/*  REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .settings-page *,

@@ -47,9 +47,7 @@ import {
 import "./MyLearning.css";
 
 function MyLearning() {
-  // =========================================
   // DATA STATES
-  // =========================================
 
   const [notes, setNotes] = useState([]);
   const [notesLoading, setNotesLoading] = useState(true);
@@ -67,9 +65,7 @@ function MyLearning() {
   const [interviewsLoading, setInterviewsLoading] = useState(true);
   const [interviewsError, setInterviewsError] = useState("");
 
-  // =========================================
   // EXPANDED ITEM STATES
-  // =========================================
 
   const [expandedNote, setExpandedNote] = useState(null);
   const [expandedQuiz, setExpandedQuiz] = useState(null);
@@ -77,10 +73,7 @@ function MyLearning() {
   const [expandedInterview, setExpandedInterview] = useState(null);
 
   const [activeFilter, setActiveFilter] = useState("all");
-
-  // =========================================
   // DELETE MODAL STATES
-  // =========================================
 
   const [deleteModal, setDeleteModal] = useState({
     isOpen: false,
@@ -95,9 +88,7 @@ function MyLearning() {
   // Prevent duplicate delete requests.
   const deleteLockRef = useRef(false);
 
-  // =========================================
   // LOAD NOTES
-  // =========================================
 
   const loadNotes = useCallback(async () => {
     try {
@@ -115,9 +106,7 @@ function MyLearning() {
     }
   }, []);
 
-  // =========================================
   // LOAD QUIZZES
-  // =========================================
 
   const loadQuizzes = useCallback(async () => {
     try {
@@ -135,9 +124,7 @@ function MyLearning() {
     }
   }, []);
 
-  // =========================================
   // LOAD FLASHCARDS
-  // =========================================
 
   const loadFlashcards = useCallback(async () => {
     try {
@@ -159,9 +146,7 @@ function MyLearning() {
     }
   }, []);
 
-  // =========================================
   // LOAD INTERVIEWS
-  // =========================================
 
   const loadInterviews = useCallback(async () => {
     try {
@@ -183,9 +168,7 @@ function MyLearning() {
     }
   }, []);
 
-  // =========================================
   // INITIAL DATA LOADING
-  // =========================================
 
   useEffect(() => {
     loadNotes();
@@ -194,9 +177,7 @@ function MyLearning() {
     loadInterviews();
   }, [loadNotes, loadQuizzes, loadFlashcards, loadInterviews]);
 
-  // =========================================
   // DELETE MODAL
-  // =========================================
 
   const openDeleteModal = (type, id, title) => {
     if (id === null || id === undefined || deleteLockRef.current) {
@@ -228,9 +209,7 @@ function MyLearning() {
     });
   };
 
-  // =========================================
   // CONFIRM DELETE
-  // =========================================
 
   const confirmDelete = async () => {
     if (
@@ -319,9 +298,7 @@ function MyLearning() {
     }
   };
 
-  // =========================================
   // DATE FORMATTING
-  // =========================================
 
   const formatDate = (date) => {
     if (!date) return "Date unavailable";
@@ -351,17 +328,13 @@ function MyLearning() {
     }
   };
 
-  // =========================================
   // TOGGLE EXPANDED ITEMS
-  // =========================================
 
   const toggleItem = (id, current, setter) => {
     setter(current === id ? null : id);
   };
 
-  // =========================================
   // QUIZ ANSWER HELPERS
-  // =========================================
 
   const getOptionText = (option) => {
     if (option === null || option === undefined) {
@@ -388,12 +361,6 @@ function MyLearning() {
       .replace(/\s+/g, " ");
   };
 
-  // Converts an answer into its matching option index.
-  // Supports:
-  // - Numeric option indexes
-  // - A/B/C/D option letters
-  // - Exact option text
-  // - Objects containing label/text/value
   const getAnswerIndex = (answer, options = []) => {
     if (
       answer === null ||
@@ -470,9 +437,7 @@ function MyLearning() {
     );
   };
 
-  // =========================================
   // STATISTICS
-  // =========================================
 
   const totalQuestions = quizzes.reduce(
     (total, quiz) =>
@@ -516,9 +481,7 @@ function MyLearning() {
     Boolean(flashcardsError) ||
     Boolean(interviewsError);
 
-  // =========================================
   // FILTERS
-  // =========================================
 
   const filters = [
     { id: "all", label: "All Items", count: totalSavedItems },
@@ -535,9 +498,7 @@ function MyLearning() {
   const showSection = (section) =>
     activeFilter === "all" || activeFilter === section;
 
-  // =========================================
   // EMPTY / ERROR / LOADING STATE
-  // =========================================
 
   const renderEmptyState = (
     Icon,
@@ -568,16 +529,12 @@ function MyLearning() {
     </div>
   );
 
-  // =========================================
   // RENDER
-  // =========================================
 
   return (
     <div className="my-learning-page">
 
-      {/* =====================================
-          PAGE HEADER
-      ====================================== */}
+      {/*  PAGE HEADER*/}
 
       <section className="my-learning-hero">
         <div className="my-learning-hero-content">
@@ -614,9 +571,7 @@ function MyLearning() {
         </div>
       </section>
 
-      {/* =====================================
-          STATISTICS
-      ====================================== */}
+      {/*  STATISTICS */}
 
       <section className="learning-stats">
 
@@ -682,9 +637,7 @@ function MyLearning() {
 
       </section>
 
-      {/* =====================================
-          LEARNING LIBRARY AND FILTERS
-      ====================================== */}
+      {/* LEARNING LIBRARY AND FILTERS  */}
 
       <section className="learning-library">
 
@@ -734,9 +687,7 @@ function MyLearning() {
         </div>
       </section>
 
-      {/* =====================================
-          NOTES
-      ====================================== */}
+      {/*  NOTES */}
 
       {showSection("notes") && (
         <section className="my-learning-section">
@@ -873,9 +824,7 @@ function MyLearning() {
         </section>
       )}
 
-      {/* =====================================
-          QUIZZES
-      ====================================== */}
+      {/*  QUIZZES */}
 
       {showSection("quizzes") && (
         <section className="my-learning-section">
@@ -1164,9 +1113,7 @@ function MyLearning() {
         </section>
       )}
 
-      {/* =====================================
-          FLASHCARDS
-      ====================================== */}
+      {/*  FLASHCARDS */}
 
       {showSection("flashcards") && (
         <section className="my-learning-section">
@@ -1370,9 +1317,7 @@ function MyLearning() {
         </section>
       )}
 
-      {/* =====================================
-          INTERVIEW PRACTICE
-      ====================================== */}
+      {/*  INTERVIEW PRACTICE */}
 
       {showSection("interviews") && (
         <section className="my-learning-section">
@@ -1590,9 +1535,7 @@ function MyLearning() {
         </section>
       )}
 
-      {/* =====================================
-          OVERALL EMPTY STATE
-      ====================================== */}
+      {/*  OVERALL EMPTY STATE */}
 
       {!anyLoading &&
         !anyError &&
@@ -1614,9 +1557,7 @@ function MyLearning() {
           </div>
         )}
 
-      {/* =====================================
-          FOOTER
-      ====================================== */}
+      {/* FOOTER */}
 
       <div className="learning-footer-note">
         <Sparkles size={15} />
@@ -1625,9 +1566,7 @@ function MyLearning() {
         </span>
       </div>
 
-      {/* =====================================
-          DELETE CONFIRMATION MODAL
-      ====================================== */}
+      {/* DELETE CONFIRMATION MODAL */}
 
       {deleteModal.isOpen && (
         <div

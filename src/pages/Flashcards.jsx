@@ -122,9 +122,7 @@ function Flashcards() {
     ? Math.round((reviewedCount / cards.length) * 100)
     : 0;
 
-  // =========================================
   // GENERATE FLASHCARDS
-  // =========================================
 
   const handleGenerateFlashcards = async (e) => {
     e.preventDefault();
@@ -296,9 +294,7 @@ The flashcards array MUST contain exactly ${count} complete objects.
     }
   };
 
-  // =========================================
   // FLIP CARD
-  // =========================================
 
   const handleFlip = () => {
     if (!currentCard) return;
@@ -306,10 +302,8 @@ The flashcards array MUST contain exactly ${count} complete objects.
     setIsFlipped((previous) => !previous);
   };
 
-  // =========================================
   // NAVIGATION
-  // =========================================
-
+ 
   const handleNext = () => {
     if (currentIndex >= cards.length - 1) return;
 
@@ -324,9 +318,7 @@ The flashcards array MUST contain exactly ${count} complete objects.
     setIsFlipped(false);
   };
 
-  // =========================================
   // MARK AS KNOWN
-  // =========================================
 
   const handleKnown = () => {
     if (!currentCard) return;
@@ -344,9 +336,7 @@ The flashcards array MUST contain exactly ${count} complete objects.
     );
   };
 
-  // =========================================
   // MARK FOR PRACTICE
-  // =========================================
 
   const handlePractice = () => {
     if (!currentCard) return;
@@ -364,9 +354,7 @@ The flashcards array MUST contain exactly ${count} complete objects.
     );
   };
 
-  // =========================================
   // SHUFFLE CARDS
-  // =========================================
 
   const handleShuffle = () => {
     if (cards.length < 2) return;
@@ -387,9 +375,7 @@ The flashcards array MUST contain exactly ${count} complete objects.
     setIsFlipped(false);
   };
 
-  // =========================================
-  // RESTART SESSION
-  // =========================================
+  // RESTART SESSION=
 
   const handleRestart = () => {
     setCurrentIndex(0);
@@ -402,18 +388,14 @@ The flashcards array MUST contain exactly ${count} complete objects.
     setError("");
   };
 
-  // =========================================
   // FINISH SESSION
-  // =========================================
 
   const handleFinish = () => {
     setCompleted(true);
     setIsFlipped(false);
   };
 
-  // =========================================
   // CREATE NEW DECK
-  // =========================================
 
   const handleCreateNewSet = () => {
     setRequest("");

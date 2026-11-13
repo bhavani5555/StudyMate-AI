@@ -1,8 +1,5 @@
 
-/* =========================================
-   STUDYMATE - QUIZ GENERATOR
-   LIGHT MODE
-========================================= */
+/*   QUIZ GENERATOR */
 
 .quiz-page,
 .quiz-page * {
@@ -25,9 +22,7 @@
   color: #25223b;
 }
 
-/* =========================================
-   PAGE HEADER
-========================================= */
+/*  PAGE HEADER  */
 
 .quiz-header {
   display: flex;
@@ -68,9 +63,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   OVERVIEW
-========================================= */
+/*  OVERVIEW  */
 
 .quiz-overview {
   width: 100%;
@@ -101,9 +94,7 @@
   font-size: 13px;
 }
 
-/* =========================================
-   STATISTICS
-========================================= */
+/* STATISTICS */
 
 .quiz-stats-grid {
   display: grid;
@@ -189,9 +180,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   CONFIGURATION CARD
-========================================= */
+/*  CONFIGURATION CARD */
 
 .quiz-config-card {
   width: 100%;
@@ -244,9 +233,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   FORM
-========================================= */
+/* FORM */
 
 .quiz-form-group {
   min-width: 0;
@@ -320,9 +307,7 @@
   gap: 16px;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/*  BUTTONS */
 
 .start-quiz-btn,
 .retake-quiz-btn {
@@ -360,9 +345,7 @@
   box-shadow: none;
 }
 
-/* =========================================
-   QUIZ CONTAINER
-========================================= */
+/*  QUIZ CONTAINER */
 
 .quiz-container {
   width: 100%;
@@ -378,9 +361,7 @@
     0 8px 24px rgba(32, 25, 58, 0.035);
 }
 
-/* =========================================
-   TOP BAR
-========================================= */
+/*  TOP BAR */
 
 .quiz-top-bar {
   display: flex;
@@ -410,9 +391,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* =========================================
-   PROGRESS BAR
-========================================= */
+/* PROGRESS BAR */
 
 .quiz-progress-track {
   width: 100%;
@@ -430,9 +409,7 @@
   transition: width 0.3s ease;
 }
 
-/* =========================================
-   QUESTION
-========================================= */
+/*  QUESTION  */
 
 .quiz-question {
   margin: 0 0 24px;
@@ -444,9 +421,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   ANSWER OPTIONS
-========================================= */
+/* ANSWER OPTIONS */
 
 .quiz-answer-list {
   display: flex;
@@ -516,9 +491,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* NAVIGATION */
 
 .quiz-navigation {
   display: flex;
@@ -575,9 +548,7 @@
   text-align: right;
 }
 
-/* =========================================
-   RESULT CARD
-========================================= */
+/*  RESULT CARD */
 
 .quiz-result-card {
   width: 100%;
@@ -662,9 +633,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   ERROR MESSAGE
-========================================= */
+/*  ERROR MESSAGE  */
 
 .quiz-error-message {
   margin: 0 0 15px;
@@ -678,9 +647,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================================
-   LOADING ANIMATION
-========================================= */
+/*  LOADING ANIMATION  */
 
 .spin {
   animation: quiz-spin 1s linear infinite;
@@ -692,9 +659,7 @@
   }
 }
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
+/*  ACCESSIBILITY  */
 
 .quiz-page button:focus-visible,
 .quiz-page input:focus-visible,
@@ -703,9 +668,7 @@
   outline-offset: 3px;
 }
 
-/* =========================================
-   DARK MODE
-========================================= */
+/*  DARK MODE */
 
 html[data-theme="dark"] .quiz-page {
   background:
@@ -1017,9 +980,7 @@ html[data-theme="dark"] .quiz-page select:focus-visible {
   outline-color: #b49aff;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
   .quiz-page {
@@ -1256,9 +1217,7 @@ html[data-theme="dark"] .quiz-page select:focus-visible {
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .quiz-page *,

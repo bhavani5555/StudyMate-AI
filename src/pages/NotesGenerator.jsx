@@ -34,22 +34,16 @@ import {
 
 import "./NotesGenerator.css";
 
-// ========================================
 // PDF WORKER
-// ========================================
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
-// ========================================
 // CONSTANTS
-// ========================================
 
 const MAX_DOCUMENT_CHARS = 45000;
 const MAX_FILE_SIZE = 15 * 1024 * 1024;
 
-// ========================================
 // GENERAL HELPERS
-// ========================================
 
 const getSafeFilename = (value) =>
   (value || "StudyMate_Notes")
@@ -84,9 +78,7 @@ const getSafePdfText = (value = "") =>
     .replace(/•/g, "-")
     .replace(/\u00a0/g, " ");
 
-// ========================================
 // DOCUMENT EXTRACTION
-// ========================================
 
 const extractPdfText = async (file) => {
   const data = new Uint8Array(await file.arrayBuffer());
@@ -187,9 +179,7 @@ const extractDocumentText = async (file) => {
   };
 };
 
-// ========================================
 // MARKDOWN PARSER FOR PDF
-// ========================================
 
 const parseNotes = (content = "") => {
   const lines = content.replace(/\r/g, "").split("\n");
@@ -354,9 +344,7 @@ const parseNotes = (content = "") => {
   return blocks;
 };
 
-// ========================================
 // SAVE PDF FILE
-// ========================================
 
 const saveDocument = async (blob, filename, mimeType) => {
   if (window.showSaveFilePicker) {
@@ -405,9 +393,7 @@ const saveDocument = async (blob, filename, mimeType) => {
   return true;
 };
 
-// ========================================
 // PDF GENERATOR
-// ========================================
 
 const createPDF = async (content, title) => {
   const pdf = new jsPDF({
@@ -626,9 +612,7 @@ const createPDF = async (content, title) => {
   return pdf.output("blob");
 };
 
-// ========================================
 // NOTES GENERATOR COMPONENT
-// ========================================
 
 function NotesGenerator() {
   const [topic, setTopic] = useState("");
@@ -666,9 +650,7 @@ function NotesGenerator() {
   // Ignore results from an older file upload.
   const fileRequestIdRef = useRef(0);
 
-  // ========================================
   // LOAD SAVED NOTES
-  // ========================================
 
   const loadSavedNotes = useCallback(async () => {
     try {
@@ -695,9 +677,7 @@ function NotesGenerator() {
     loadSavedNotes();
   }, [loadSavedNotes]);
 
-  // ========================================
   // TOPIC INPUT
-  // ========================================
 
   const handleTopicChange = (event) => {
     setTopic(event.target.value);
@@ -706,10 +686,7 @@ function NotesGenerator() {
     setSavedMessage("");
     setSelectedNoteId(null);
   };
-
-  // ========================================
   // FILE UPLOAD
-  // ========================================
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files?.[0];
@@ -778,9 +755,7 @@ function NotesGenerator() {
     }
   };
 
-  // ========================================
   // GENERATION PROMPT
-  // ========================================
 
   const buildPrompt = (
     enteredTopic,
@@ -907,9 +882,7 @@ Generate accurate, organized and complete study notes focused on the user's exac
 `;
   };
 
-  // ========================================
   // GENERATE AND SAVE NOTES
-  // ========================================
 
   const handleGenerate = async (event) => {
     event.preventDefault();
@@ -1030,9 +1003,7 @@ Generate accurate, organized and complete study notes focused on the user's exac
     }
   };
 
-  // ========================================
   // VIEW SAVED NOTE
-  // ========================================
 
   const handleViewNote = (note) => {
     if (!note) return;
@@ -1054,9 +1025,7 @@ Generate accurate, organized and complete study notes focused on the user's exac
     });
   };
 
-  // ========================================
   // DELETE SAVED NOTE
-  // ========================================
 
   const handleDeleteNote = async (noteId) => {
     if (!noteId || deletingNoteId) return;
@@ -1092,10 +1061,7 @@ Generate accurate, organized and complete study notes focused on the user's exac
       setDeletingNoteId(null);
     }
   };
-
-  // ========================================
   // DOWNLOAD PDF
-  // ========================================
 
   const handleDownloadPDF = async (note) => {
     if (!note?.content || downloading) return;
@@ -1129,19 +1095,14 @@ Generate accurate, organized and complete study notes focused on the user's exac
     }
   };
 
-  // ========================================
   // SEARCH SAVED NOTES
-  // ========================================
 
   const filteredNotes = savedNotes.filter((note) =>
     `${note.topic || ""} ${note.format || ""} ${note.level || ""} ${note.sourceFileName || ""}`
       .toLowerCase()
       .includes(searchTerm.trim().toLowerCase())
   );
-
-  // ========================================
   // FORMAT DATE
-  // ========================================
 
   const formatDate = (dateValue) => {
     if (!dateValue) return "Date unavailable";
@@ -1159,9 +1120,7 @@ Generate accurate, organized and complete study notes focused on the user's exac
     });
   };
 
-  // ========================================
   // UI
-  // ========================================
 
   return (
     <div className="notes-page">

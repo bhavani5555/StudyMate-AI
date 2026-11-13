@@ -1,7 +1,5 @@
 
-/* =========================================
-   DASHBOARD - BASE LAYOUT
-========================================= */
+/*  DASHBOARD - BASE LAYOUT */
 
 .dashboard .welcome-section {
   display: grid;
@@ -33,9 +31,7 @@
   font-size: 42px;
 }
 
-/* =========================================
-   ABOUT STUDYMATE - BASE STYLES
-========================================= */
+/*  ABOUT STUDYMATE - BASE STYLES  */
 
 .dashboard-about-card {
   height: auto;
@@ -103,17 +99,13 @@
   flex-shrink: 0;
 }
 
-/* =========================================
-   PREMIUM DASHBOARD DARK MODE
-========================================= */
+/*  PREMIUM DASHBOARD DARK MODE  */
 
 html[data-theme="dark"] .dashboard {
   color: #eef2ff;
 }
 
-/* =========================================
-   WELCOME BANNER
-========================================= */
+/*  WELCOME BANNER  */
 
 html[data-theme="dark"] .dashboard .welcome-section {
   position: relative;
@@ -179,9 +171,7 @@ html[data-theme="dark"] .dashboard .welcome-icon {
   filter: drop-shadow(0 0 15px rgba(167, 139, 250, 0.55));
 }
 
-/* =========================================
-   GENERAL DASHBOARD PANELS
-========================================= */
+/* GENERAL DASHBOARD PANELS  */
 
 html[data-theme="dark"] .dashboard .dashboard-panel,
 html[data-theme="dark"] .dashboard .stat-card {
@@ -206,9 +196,7 @@ html[data-theme="dark"] .dashboard .dashboard-panel-heading > svg {
   color: #b9a5ff;
 }
 
-/* =========================================
-   STATISTICS
-========================================= */
+/*  STATISTICS  */
 
 html[data-theme="dark"] .dashboard .stat-card p {
   color: #cbd5e1 !important;
@@ -226,9 +214,7 @@ html[data-theme="dark"] .dashboard .stat-card > span {
   font-size: 13px;
 }
 
-/* =========================================
-   CONTINUE LEARNING
-========================================= */
+/*  CONTINUE LEARNING */
 
 html[data-theme="dark"] .dashboard .continue-item {
   background: #252f47 !important;
@@ -256,9 +242,7 @@ html[data-theme="dark"] .dashboard .continue-item > svg {
   color: #b9a5ff;
 }
 
-/* =========================================
-   WEEKLY STUDY ANALYTICS
-========================================= */
+/*  WEEKLY STUDY ANALYTICS */
 
 html[data-theme="dark"] .dashboard .weekly-total h2 {
   color: #ffffff !important;
@@ -303,9 +287,7 @@ html[data-theme="dark"] .dashboard .weekly-chart-column > span {
   font-weight: 600;
 }
 
-/* =========================================
-   TODAY'S ACTIVITY
-========================================= */
+/* TODAY'S ACTIVITY */
 
 html[data-theme="dark"] .dashboard .activity-summary > div {
   background: #252f47;
@@ -347,9 +329,7 @@ html[data-theme="dark"] .dashboard .recent-activity-text small {
   font-size: 12px;
 }
 
-/* =========================================
-   EMPTY STATES
-========================================= */
+/*  EMPTY STATES */
 
 html[data-theme="dark"] .dashboard .dashboard-empty {
   color: #e2e8f0 !important;
@@ -365,9 +345,7 @@ html[data-theme="dark"] .dashboard .dashboard-empty span {
   font-size: 13px;
 }
 
-/* =========================================
-   LEARNING GOALS
-========================================= */
+/*  LEARNING GOALS */
 
 html[data-theme="dark"] .dashboard .goal-progress strong {
   color: #ffffff !important;
@@ -400,9 +378,7 @@ html[data-theme="dark"] .dashboard .goal-list button > svg:last-child {
   color: #aebbd1;
 }
 
-/* =========================================
-   ACHIEVEMENTS
-========================================= */
+/*  ACHIEVEMENTS */
 
 html[data-theme="dark"] .dashboard .achievements-preview-info strong {
   color: #ffffff !important;
@@ -422,9 +398,7 @@ html[data-theme="dark"] .dashboard .dashboard-text-link {
   color: #c4b5fd !important;
 }
 
-/* =========================================
-   ABOUT STUDYMATE - DARK MODE
-========================================= */
+/*  ABOUT STUDYMATE - DARK MODE */
 
 html[data-theme="dark"] .dashboard .dashboard-about-card {
   position: relative;
@@ -500,9 +474,7 @@ html[data-theme="dark"] .dashboard .dashboard-about-icon {
   box-shadow: 0 5px 16px rgba(124, 92, 255, 0.3);
 }
 
-/* =========================================
-   EXPLORE STUDYMATE
-========================================= */
+/*  EXPLORE STUDYMATE  */
 
 html[data-theme="dark"] .dashboard .tools-panel {
   background: #1d2538 !important;
@@ -551,9 +523,7 @@ html[data-theme="dark"] .dashboard .dashboard-tool-card .tool-icon {
   border-color: transparent;
 }
 
-/* =========================================
-   DASHBOARD SEARCH
-========================================= */
+/*  DASHBOARD SEARCH  */
 
 html[data-theme="dark"] .dashboard input[type="text"] {
   background: #20263a;
@@ -584,9 +554,7 @@ html[data-theme="dark"] .dashboard .search-icon {
   color: #b6a5ff;
 }
 
-/* =========================================
-   MODAL
-========================================= */
+/*   MODAL */
 
 html[data-theme="dark"] .dashboard .dashboard-modal {
   background: #202940 !important;
@@ -609,9 +577,7 @@ html[data-theme="dark"] .dashboard .dashboard-modal-heading button {
   background: #303a52;
 }
 
-/* =========================================
-   ERROR MESSAGE
-========================================= */
+/*  ERROR MESSAGE */
 
 html[data-theme="dark"] .dashboard .dashboard-error-message {
   background: #482a35;
@@ -619,9 +585,7 @@ html[data-theme="dark"] .dashboard .dashboard-error-message {
   color: #ffd8e0;
 }
 
-/* =========================================
-   RESPONSIVE - TABLET
-========================================= */
+/*  RESPONSIVE - TABLET */
 
 @media (max-width: 1100px) {
   .dashboard .welcome-section {
@@ -635,9 +599,7 @@ html[data-theme="dark"] .dashboard .dashboard-error-message {
   }
 }
 
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
+/*  RESPONSIVE - MOBILE */
 
 @media (max-width: 768px) {
   html[data-theme="dark"] .dashboard .welcome-content h1 {
